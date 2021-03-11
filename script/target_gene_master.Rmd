@@ -13,7 +13,7 @@ output:
 
 # Description
 This document describes the steps, code, and files used to generate the ~50kb [TwinStrand](https://twinstrandbio.com/) sequencing panel to study the genetics of male infertility. Specifically, we are targeting DNA damage repair genes, known cancer genes, AZF genes, and genes involved in clonal spermatogenesis.  
-![](/Users/jasonkunisaki/git/spermseq/Powerpoint/visual_abstract.png)
+![](/Users/jasonkunisaki/git/spermseq/powerpoint/visual_abstract.png)
 
 # Pre-Processing of Necessary Files
 ## Target Gene List 
@@ -222,7 +222,7 @@ if (!file.exists("~/git/spermseq/script/gtf_df.Rdata")) {
 }
 ```
 ## Get the Pfam domain information for each exon 
-![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/Powerpoint/merge_exon_schematic.png)
+![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/powerpoint/merge_exon_schematic.png)
 ```{r, message=FALSE}
 ## Output the warning messages of the pfam domain exon analysis 
 if (file.exists("~/git/spermseq/script/get_pfam_log.txt")) {
@@ -248,7 +248,7 @@ sink()
 ```
 
 ## Merge overlapping exons across transcripts of the same gene
-![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/Powerpoint/merge_exon_schematic.png)
+![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/powerpoint/merge_exon_schematic.png)
 ```{r, message=FALSE, eval=TRUE}
 source("~/git/spermseq/script/merge_exons.R")
 merged_exons <- merge_exons(df = pfam_df)
@@ -380,8 +380,8 @@ write.table(x = merged_exons_hotspot, file = "~/git/spermseq/twinstrand_target_g
 ```
 
 ## Plots with different filters {.tabset}
-![Identify exons overlapping functional domains and/or harbor cancer hotspot mutations.](/Users/jasonkunisaki/git/spermseq/Powerpoint/cbioportal_example.png)
-![Identify exons that are found in a certain proportion of transcripts for a given gene.](/Users/jasonkunisaki/git/spermseq/Powerpoint/isoforms.png)
+![Identify exons overlapping functional domains and/or harbor cancer hotspot mutations.](/Users/jasonkunisaki/git/spermseq/powerpoint/cbioportal_example.png)
+![Identify exons that are found in a certain proportion of transcripts for a given gene.](/Users/jasonkunisaki/git/spermseq/powerpoint/isoforms.png)
 
 ### Exons in functional domains and harbor hotspots
 ```{r}
