@@ -1,0 +1,305 @@
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 25 proteins ... 25 found
+Checking CDS and protein sequence lengths ... 25/25 OK
+Fetching CDS for 25 proteins ... 25 found
+Checking CDS and protein sequence lengths ... 25/25 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 12 proteins ... 12 found
+Checking CDS and protein sequence lengths ... 12/12 OK
+Fetching CDS for 12 proteins ... 12 found
+Checking CDS and protein sequence lengths ... 12/12 OK
+Fetching CDS for 5 proteins ... 5 found
+Checking CDS and protein sequence lengths ... 5/5 OK
+Fetching CDS for 5 proteins ... 5 found
+Checking CDS and protein sequence lengths ... 5/5 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+PF00636 is not found in any exons of ENST00000556045 (gene: DICER1)
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Only start coordinate of pfam domain: PF13927 is within an exon
+PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
+PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
+PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
+PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
+PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
+PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
+PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+Fetching CDS for 5 proteins ... 5 found
+Checking CDS and protein sequence lengths ... 5/5 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+PF02165 is not found in any exons of ENST00000332351 (gene: WT1)
+PF02165 is not found in any exons of ENST00000332351 (gene: WT1)
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
