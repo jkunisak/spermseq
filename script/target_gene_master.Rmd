@@ -13,7 +13,7 @@ output:
 
 # Description
 This document describes the steps, code, and files used to generate the ~50kb [TwinStrand](https://twinstrandbio.com/) sequencing panel to study the genetics of male infertility. Specifically, we are targeting DNA damage repair genes, known cancer genes, AZF genes, and genes involved in clonal spermatogenesis.  
-![](/Users/jasonkunisaki/Google Drive/Quinlan Lab - PhD/Projects/spermseq/Powerpoint/visual_abstract.png)
+![](/Users/jasonkunisaki/git/spermseq/Powerpoint/visual_abstract.png)
 
 # Pre-Processing of Necessary Files
 ## Target Gene List 
@@ -24,7 +24,7 @@ Step 2: Run below script to save into kingspeak UNIX environment
 
 ```{bash, eval=FALSE}
 ## Change working directory 
-cd ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set
+cd ~/git/spermseq/twinstrand_target_gene_set
 ## Sort and unique 
 cat target_genes.txt | sort | uniq > target_genes_v1.txt
 ## Copy to kingspeak directory
@@ -38,19 +38,19 @@ cd ~/spermseq/twinstrand_target
 
 ## Download GTF file 
 wget ftp://ftp.ensembl.org/pub/release-102/gtf/homo_sapiens/Homo_sapiens.GRCh38.102.gtf.gz | zless | grep -w "CDS" > Homo_sapiens.GRCh38.102.CDS.gtf
-scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets/Homo_sapiens.GRCh38.102.CDS.gtf ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set/data
+scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets/Homo_sapiens.GRCh38.102.CDS.gtf ~/git/spermseq/twinstrand_target_gene_set/data
 
 ## Get the gene_ids of the target genes of interest
 cat target_genes_v1.txt | awk '{print "cat Homo_sapiens.GRCh38.102.CDS.gtf | grep \"gene_name \\\""$1"\\\"\""}' | bash | cut -f 9 | awk 'BEGIN{FS = "\"; "} ; {print $0}' | sed 's/\"; /|/g' | sed 's/;//g' | sed 's/ \"/=/g' > target_gene_list_gtf_identifiers.txt
 
 ## Copy target_genes_gid_tid_pid.txt file to local 
-scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets/target_gene_list_gtf_identifiers.txt ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set
+scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets/target_gene_list_gtf_identifiers.txt ~/git/spermseq/twinstrand_target_gene_set
 ```
 ## Use R script to get gene identifier information from the GTF file 
 Use R to obtain key GTF fields for each gene: gene_name, gene_id, transcript_id, protein_id, and exon_number. 
 ```{r, eval=FALSE}
 ## Read in the file 
-df <- read.table("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/target_gene_list_gtf_identifiers.txt")
+df <- read.table("~/git/spermseq/twinstrand_target_gene_set/target_gene_list_gtf_identifiers.txt")
 
 ## Go through each row and get the gene_id, gene_name, transcript_id, protein_id, exon_number, and exon_id
 x <- df[1,]
@@ -65,13 +65,13 @@ ids <- rbindlist(apply(df, 1, function(x) {
                     "protein_id"=fields[10],
                     "exon_number"=fields[6]))
 }))
-write.table(x = ids, file = "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/target_gene_list_ids.txt", quote = FALSE, sep = "\t", row.names = FALSE)
+write.table(x = ids, file = "~/git/spermseq/twinstrand_target_gene_set/target_gene_list_ids.txt", quote = FALSE, sep = "\t", row.names = FALSE)
 ```
 ## GTEx gene-level expression data 
 Obtain GTEx TPM data using gene_ids belonging to the genes of interest.
 ```{bash, eval=FALSE}
 ## Copy the gene list ids file to kingspeak 
-scp ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set/target_gene_list_ids.txt u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets
+scp ~/git/spermseq/twinstrand_target_gene_set/target_gene_list_ids.txt u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets
 
 ## Download master sample list to identify testis samples
 cd ~/spermseq/data/GTEx/samples
@@ -94,7 +94,7 @@ rm header.temp
 rm testis.data.temp
 
 ## Copy final file to local directory
-scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/GTEx/transcripts/GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_TESTIS_transcript_tpm.gct ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set/data
+scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/GTEx/transcripts/GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_TESTIS_transcript_tpm.gct ~/git/spermseq/twinstrand_target_gene_set/data
 ```
 ## APPRIS isoform data
 ```{bash, eval=FALSE}
@@ -103,7 +103,7 @@ cd ~/spermseq/data/appris
 wget http://apprisws.bioinfo.cnio.es/pub/current_release/datafiles/homo_sapiens/GRCh38/appris_data.principal.txt
 
 ## Copy to local directory
-scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/appris/appris_data.principal.txt ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set/data
+scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/appris/appris_data.principal.txt ~/git/spermseq/twinstrand_target_gene_set/data
 ```
 
 # General analysis workflow 
@@ -133,10 +133,10 @@ library(EnsDb.Hsapiens.v86)
 ##################################
 ##### Specify file locations #####
 ##################################
-appris_file <- "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/data/appris_data.principal.txt"
-gtf_file <- "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/data/Homo_sapiens.GRCh38.102.CDS.gtf"
-GTEx_file <- "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/data/GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_TESTIS_transcript_tpm.gct"
-GTEx_samples <- "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/data/GTEx_testis_samples.txt"
+appris_file <- "~/git/spermseq/twinstrand_target_gene_set/data/appris_data.principal.txt"
+gtf_file <- "~/git/spermseq/twinstrand_target_gene_set/data/Homo_sapiens.GRCh38.102.CDS.gtf"
+GTEx_file <- "~/git/spermseq/twinstrand_target_gene_set/data/GTEx_Analysis_2017-06-05_v8_RSEMv1.3.0_TESTIS_transcript_tpm.gct"
+GTEx_samples <- "~/git/spermseq/twinstrand_target_gene_set/data/GTEx_testis_samples.txt"
 
 #########################################
 ##### Specify the genes of interest #####
@@ -157,7 +157,7 @@ genes <- c(genes, "USP9Y", "DDX3Y", "PRY")
 
 ## Get TPM data from GTEx testis samples
 ```{r}
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/testis_GTEx_samples.R")
+source("~/git/spermseq/script/testis_GTEx_samples.R")
 testis_GTEx_tpm <- testis_GTEx_samples(GTEx_file = GTEx_file, GTEx_samples = GTEx_samples)
 head(testis_GTEx_tpm)
 ```
@@ -166,14 +166,14 @@ head(testis_GTEx_tpm)
 See [APPRIS](https://github.com/appris/appris/tree/master/data) for column details... 
 **SANITY CHECK:** This steps check that each gene of interest has an APPRIS isoform tag. If not, it will obtain the gene_id from [biomaRt](http://uswest.ensembl.org/biomart/martview/d22e39c1bfd36e356ee213ba770cb249) using the gene_name. No transcript_ids or CCDS_id will be obtained and the 'status' column will be flagged with a "minor" APPRIS designation. 
 ```{r}
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/appris_manipulation.R")
+source("~/git/spermseq/script/appris_manipulation.R")
 appris_df <- appris_manipulation(appris_file = appris_file, genes = genes) 
 head(appris_df)
 ```
 
 ## Get the GTEx testis TPM data of each APPRIS transcript
 ```{r}
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/appris_manipulation.R")
+source("~/git/spermseq/script/appris_manipulation.R")
 appris_df_tpm <- get_appris_tpm(appris_df = appris_df, testis_GTEx_tpm = testis_GTEx_tpm)
 appris_df_tpm <- data.table(do.call("rbind", appris_df_tpm)) %>% `colnames<-`(c("gene_name", "gene_id", "transcript_id", "CCDS", "status", "avg_GTEx_TPM"))
 
@@ -189,12 +189,12 @@ These are transcripts that are not identified as **PRINCIPAL** isoforms by **APP
 **NOTE: The GTEx-only transcript must have an avg TPM > 1 across all testis samples to be included in the dataset**
 
 ```{r}
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/gtex_transcript_tpm_manipulation.R")
+source("~/git/spermseq/script/gtex_transcript_tpm_manipulation.R")
 appris_gtex_transcript_tpm <- gtex_transcript_tpm_manipulation(appris_df_tpm = appris_df_tpm, testis_GTEx_tpm = testis_GTEx_tpm, moderate_gene_ids = moderate_gene_ids)
 
 # ## Run this command to filter out appris exons not reliably defined as principal exons
 # appris_gtex_transcript_tpm <- appris_gtex_transcript_tpm[!(status %in% c("PRINCIPAL:4", "PRINCIPAL:5", "ALTERNATIVE:1", "ALTERNATIVE:2"))]
-# file.remove("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/gtf_df.Rdata")
+# file.remove("~/git/spermseq/script/gtf_df.Rdata")
 
 appris_gtex_transcript_tpm
 ```
@@ -202,39 +202,39 @@ appris_gtex_transcript_tpm
 ## Use GTF file to get exon positions within each transcript (multiple transcripts belong to the same gene)
 ```{r}
 ## This is the longest step, see if the data already exists 
-if (file.exists("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/gtf_df.Rdata")) {
-  load("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/gtf_df.Rdata")
+if (file.exists("~/git/spermseq/script/gtf_df.Rdata")) {
+  load("~/git/spermseq/script/gtf_df.Rdata")
 }
 
-if (!file.exists("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/gtf_df.Rdata")) {
+if (!file.exists("~/git/spermseq/script/gtf_df.Rdata")) {
   ## Read in the gtf file 
   gtf <- fread(gtf_file, header=FALSE) %>% .[,c(1,4,5,9)] %>% `colnames<-` (c("chr", "start", "stop", "info")) 
   
   ## Get exon positions
-  source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/gtf_manipulation.R")
+  source("~/git/spermseq/script/gtf_manipulation.R")
   gtf_df <- gtf_manipulation(gtf = gtf, df = appris_gtex_transcript_tpm)
   head(gtf_df)
-  save.image("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/gtf_df.Rdata")
+  #save.image("~/git/spermseq/script/gtf_df.Rdata")
   
   ## Write output to text file 
-  write.table(x = gtf_df, file = "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/output/appris_gtex_gtf_testis.txt",
+  write.table(x = gtf_df, file = "~/git/spermseq/twinstrand_target_gene_set/output/appris_gtex_gtf_testis.txt",
               quote = FALSE, sep = "\t", row.names = FALSE)  
 }
 ```
 ## Get the Pfam domain information for each exon 
-![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/Google Drive/Quinlan Lab - PhD/Projects/spermseq/Powerpoint/merge_exon_schematic.png)
+![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/Powerpoint/merge_exon_schematic.png)
 ```{r, message=FALSE}
 ## Output the warning messages of the pfam domain exon analysis 
-if (file.exists("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/get_pfam_log.txt")) {
-  file.remove("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/get_pfam_log.txt")
+if (file.exists("~/git/spermseq/script/get_pfam_log.txt")) {
+  file.remove("~/git/spermseq/script/get_pfam_log.txt")
 }
 ## Capture output to a file
-sink_file <- file("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/get_pfam_log.txt", open = "wt")
+sink_file <- file("~/git/spermseq/script/get_pfam_log.txt", open = "wt")
 sink(sink_file)
 sink(sink_file, type = "message")
 
 ## Run the function
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/get_pfam.R")
+source("~/git/spermseq/script/get_pfam.R")
 pfam_df <- get_pfam(df = gtf_df)
 
 ## Output the data
@@ -248,9 +248,9 @@ sink()
 ```
 
 ## Merge overlapping exons across transcripts of the same gene
-![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/Google Drive/Quinlan Lab - PhD/Projects/spermseq/Powerpoint/merge_exon_schematic.png)
+![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/Powerpoint/merge_exon_schematic.png)
 ```{r, message=FALSE, eval=TRUE}
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/merge_exons.R")
+source("~/git/spermseq/script/merge_exons.R")
 merged_exons <- merge_exons(df = pfam_df)
 
 ## Get the total panel space (exonic)
@@ -261,11 +261,11 @@ merged_exons$proportion_total <- merged_exons$total_nucleotides/total*100
 #head(merged_exons)
 
 ## Remove exons found below threshold of total proportion of transcripts for a given gene:
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/transcript_proportion_filter.R")
+source("~/git/spermseq/script/transcript_proportion_filter.R")
 merged_exons <- transcript_proportion_filter(merged_exons = merged_exons)
 
 ## Write the output file 
-write.table(x = merged_exons, file = paste0("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/output/merged_exons_.txt"), 
+write.table(x = merged_exons, file = paste0("~/git/spermseq/twinstrand_target_gene_set/output/merged_exons_.txt"), 
             quote = FALSE, sep = "\t", row.names = FALSE)
 ```
 
@@ -317,12 +317,12 @@ zless cancerhotspots.v2.maf.gz | grep -v "#" | head -n 1 > cancerhotspots.v2.maf
 cat cancerhotspots.v2.maf.header cancerhotspots.v2.maf > cancerhotspots.v2.proteincoding.maf
 cat cancerhotspots.v2.proteincoding.maf | cut -f 1,2,5,6,7,38 > cancerhotspots.v2.proteincoding.columns.maf
 ## Copy to local directory
-scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/hotspots/cancerhotspots.v2.proteincoding.columns.maf ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set/data
+scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/hotspots/cancerhotspots.v2.proteincoding.columns.maf ~/git/spermseq/twinstrand_target_gene_set/data
 
 ## Download the liftover file to convert hg19 coordinates from MAF file to hg38
 wget https://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToHg38.over.chain.gz 
 gunzip hg19ToHg38.over.chain.gz > hg19ToHg38.over.chain
-scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/hotspots/hg19ToHg38.over.chain ~/Google\ Drive/Quinlan\ Lab\ -\ PhD/Projects/spermseq/twinstrand_target_gene_set/data
+scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/hotspots/hg19ToHg38.over.chain ~/git/spermseq/twinstrand_target_gene_set/data
 
 ```
 
@@ -332,8 +332,8 @@ scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/hotspots/hg19ToHg38.over.ch
 ## Identify exons with 1+ cancer 3D hotspot mutation 
 ```{r}
 ## Exons with 3d hotspot mutations 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/format_hotspot.R")
-merged_exons_3d_hotspot <- format_3D_hotspot(hotspot_file = "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/data/3d_hotspots_gao.txt",
+source("~/git/spermseq/script/format_hotspot.R")
+merged_exons_3d_hotspot <- format_3D_hotspot(hotspot_file = "~/git/spermseq/twinstrand_target_gene_set/data/3d_hotspots_gao.txt",
                                              genes = genes, merged_exons = merged_exons)
 
 ```
@@ -341,8 +341,8 @@ merged_exons_3d_hotspot <- format_3D_hotspot(hotspot_file = "~/Google Drive/Quin
 ## Identify exons with 1+ cancer hotspot mutation
 ```{r}
 ## Exons with snp/onp/ins/del hotspot mutations
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/format_hotspot.R")
-hotspot_file <- "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/data/cancerhotspots.v2.proteincoding.columns.maf"
+source("~/git/spermseq/script/format_hotspot.R")
+hotspot_file <- "~/git/spermseq/twinstrand_target_gene_set/data/cancerhotspots.v2.proteincoding.columns.maf"
 merged_exons_hotspot <- format_hotspot(hotspot_file = hotspot_file, genes = genes, merged_exons_3d_hotspot = merged_exons_3d_hotspot)
 merged_exons_hotspot
 ```
@@ -372,16 +372,16 @@ gr <- GRanges(seqnames = paste0("chr", merged_exons_hotspot$chr), ranges=ranges)
 
 ## Get the gc content of each sequence 
 merged_exons_hotspot$gc_content <- GetGC(bsgenome = BSgenome.Hsapiens.UCSC.hg38, gr = gr)
-write.table(x = merged_exons_hotspot, file = "~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/twinstrand_target_gene_set/output/merged_exons_final.txt",
+write.table(x = merged_exons_hotspot, file = "~/git/spermseq/twinstrand_target_gene_set/output/merged_exons_final.txt",
             sep = "\t", quote = FALSE)
 
 ## Save the data
-save.image("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/final.Rdata")
+#save.image("~/git/spermseq/script/final.Rdata")
 ```
 
 ## Plots with different filters {.tabset}
-![Identify exons overlapping functional domains and/or harbor cancer hotspot mutations.](/Users/jasonkunisaki/Google Drive/Quinlan Lab - PhD/Projects/spermseq/Powerpoint/cbioportal_example.png)
-![Identify exons that are found in a certain proportion of transcripts for a given gene.](/Users/jasonkunisaki/Google Drive/Quinlan Lab - PhD/Projects/spermseq/Powerpoint/isoforms.png)
+![Identify exons overlapping functional domains and/or harbor cancer hotspot mutations.](/Users/jasonkunisaki/git/spermseq/Powerpoint/cbioportal_example.png)
+![Identify exons that are found in a certain proportion of transcripts for a given gene.](/Users/jasonkunisaki/git/spermseq/Powerpoint/isoforms.png)
 
 ### Exons in functional domains and harbor hotspots
 ```{r}
@@ -401,7 +401,7 @@ merged_exons_pfam_hotspot <- rbindlist(lapply(unique(merged_exons_pfam_hotspot$g
 }, merged_exons_pfam_hotspot=merged_exons_pfam_hotspot))
 merged_exons_pfam_hotspot$proportion_total <- merged_exons_pfam_hotspot$total_nucleotides/total*100
 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = merged_exons_pfam_hotspot, genes = genes)
 p
 
@@ -424,7 +424,7 @@ merged_exons_pfam <- rbindlist(lapply(unique(merged_exons_pfam$gene_id), functio
 }, merged_exons_pfam=merged_exons_pfam))
 merged_exons_pfam$proportion_total <- merged_exons_pfam$total_nucleotides/total*100
 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = merged_exons_pfam, genes = genes)
 p
 ```
@@ -435,7 +435,7 @@ p
 final <- merged_exons_pfam[transcript_proportion >= 0.2]
 
 ## Generate plot 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = final, genes = genes)
 p
 ```
@@ -446,7 +446,7 @@ p
 final <- merged_exons_pfam[transcript_proportion >= 0.4]
 
 ## Generate plot 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = final, genes = genes)
 p
 ```
@@ -457,7 +457,7 @@ p
 final <- merged_exons_pfam[transcript_proportion >= 0.5]
 
 ## Generate plot 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = final, genes = genes)
 p
 ```
@@ -468,7 +468,7 @@ p
 final <- merged_exons_pfam[transcript_proportion >= 0.6]
 
 ## Generate plot 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = final, genes = genes)
 p
 ```
@@ -479,7 +479,7 @@ p
 final <- merged_exons_pfam[transcript_proportion >= 0.8]
 
 ## Generate plot 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = final, genes = genes)
 p
 ```
@@ -490,7 +490,7 @@ p
 final <- merged_exons_pfam[transcript_proportion == 1]
 
 ## Generate plot 
-source("~/Google Drive/Quinlan Lab - PhD/Projects/spermseq/script/plot_df.R")
+source("~/git/spermseq/script/plot_df.R")
 p <- plot_df(df = final, genes = genes)
 p
 ```
