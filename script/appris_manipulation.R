@@ -52,8 +52,9 @@ get_appris_tpm <- function(appris_df, testis_GTEx_tpm) {
   }
   
   ## Go through each appris isoform and get the average GTEx expression (TPM) in testis samples 
-  x <- appris_df[[136]]
+  x <- appris_df[[2]]
   appris_df_tpm <- lapply(appris_df, function(x, testis_GTEx_tpm) {
+    print(x[1])
     ## Check to see if the gene has an APPRIS designation (i.e. is not minor)
     if (x[5] != "minor") {
       ## Get the transcript's mean TPM from GTEx testis samples

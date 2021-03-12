@@ -40,6 +40,14 @@ Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
 Fetching CDS for 4 proteins ... 4 found
@@ -50,6 +58,42 @@ Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
 Fetching CDS for 2 proteins ... 2 found
@@ -241,6 +285,8 @@ Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
 Fetching CDS for 2 proteins ... 2 found
