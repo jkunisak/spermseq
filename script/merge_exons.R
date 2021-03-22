@@ -3,6 +3,7 @@
 ########################################################################
 library(data.table)
 library(dplyr)
+options(warn=1)
 
 ## Function to change the pfam_ids in overlapping exons across transcripts of the same gene
 merge_pfam <- function(tmp_pfam, exon_library_df, row) {
@@ -38,10 +39,10 @@ merge_exons <- function(df) {
   gene_ids <- df[, c("gene_id", "gene_name"), with=FALSE] %>% unique() %>% transpose(.) %>% as.list(.) %>% unname(.)
   
   ## Merge overlapping exons 
-  x <- gene_ids[[7]]
+  x <- gene_ids[[10]]
   merged_exons_df <- rbindlist(lapply(gene_ids, function(x, df) {
     gene_df <- df[gene_id == x[1]]
-    #print(x)
+    print(x)
     
     ## Get the transcript (of the gene_id) with the most number of exons 
     max_exon_transcript <- (max(gene_df$exon_num) %>% grep(., gene_df$exon_num) %>% 
@@ -52,6 +53,11 @@ merge_exons <- function(df) {
     exon_library <- gene_df[which(gene_df$transcript_id == max_exon_transcript), colnames(gene_df) %in% cols_to_keep, with=FALSE]
     exon_library$info <- paste0(exon_library$chr, ":", exon_library$start, "-", exon_library$stop, " - o")
     exon_library$transcript_num <- 1
+    
+    ## Remove exons with NA in the pfam_id column for the "reference" transcript if there is still a pfam domain remaining in the transcript
+    if (nrow(exon_library[!is.na(exon_library$pfam_id)]) != 0) {
+      exon_library <- exon_library[!is.na(exon_library$pfam_id)]
+    }
 
     ## Get the transcript(s) without the most number of exons
     non_max_exon_transcript <- gene_df$transcript_id[!(gene_df$transcript_id %in% max_exon_transcript)] %>% unique()
@@ -66,15 +72,19 @@ merge_exons <- function(df) {
       return(cbind(exon_library, transcript_info))
     }
     
-    ## Go through each transcript that does not have the most number of exonns
+    ## Go through each transcript that does not have the most number of exons
+    t = 1 ## 1-5
     for (t in 1:length(non_max_exon_transcript)) {
       
       ## Get the gtf data for the non-max exon transcripts
       transcript <- non_max_exon_transcript[t]
+      #print(t)
       tmp <- gene_df[transcript_id==transcript, colnames(gene_df) %in% cols_to_keep, with=FALSE]
       
       ## Go through each row and see if the exon start/stop is already in the library
+      r = 1
       for (r in 1:nrow(tmp)) {
+        #print(r)
         ## Get the start/stop/other info of the exon
         tmp_start <- tmp$start[r]
         tmp_stop <- tmp$stop[r]
@@ -83,9 +93,13 @@ merge_exons <- function(df) {
 
         ## Check if the exon is in the exon library 
         in_library <- grep(tmp_info, exon_library$info)
+        in_library
         
         ## If the exon in the tmp dataset is in the exon library: 
         if (length(in_library) > 0) {
+          #print("exon is already present in the library")
+          
+          ## Merge information
           exon_library <- merge_pfam(tmp_pfam = tmp_pfam, exon_library_df = exon_library, row = in_library) ## Change the pfam_id
           exon_library[in_library]$transcript_id <- paste0(exon_library[in_library]$transcript_id, " | ", transcript) ## Change the transcript_id
           exon_library[in_library]$transcript_num <- exon_library[in_library]$transcript_num + 1 ## Change the transcript_num
@@ -109,12 +123,13 @@ merge_exons <- function(df) {
           ## Situation (0): 
           sit0 <- exon_library[tmp_start <= start & tmp_stop >= stop]
           #sit0 <- exon_library[c(5,15,26)]
-          if (nrow(sit0) > 1) {
+          if (nrow(sit0) >= 1) {
+            print("situation 0")
             sit0_chr <- sit0$chr[1] ## Get the chr of the encompassing exon
-            sit0_start <- sit0$start[1] ## Get the start of the encompassing exon
-            sit0_stop <- sit0$stop[nrow(sit0)] ## Get the stop of the encompassing exon 
-            sit0_transcript_temp <- unique(sit0$transcript_id) %>% strsplit(., split =" | ", fixed = TRUE) %>% unlist() ## Get the unique transcript values 
-            sit0_transcript_id <- paste0(sit0_transcript_temp, " | ", transcript)
+            sit0_start <- min(sit0$start[1], tmp_start) ## Get the start of the encompassing exon
+            sit0_stop <- max(sit0$stop[nrow(sit0)], tmp_stop) ## Get the stop of the encompassing exon
+            sit0_transcript_temp <- unique(sit0$transcript_id) %>% strsplit(., split =" | ", fixed = TRUE) %>% unlist() ## Get the unique transcript values
+            sit0_transcript_id <- paste0(c(sit0_transcript_temp, transcript), collapse = " | ")
             sit0_transcript_num <- length(sit0_transcript_temp) + 1
             ## Get the unique pfam_ids
             if (length(na.omit(tmp_pfam)) > 0) {
@@ -127,11 +142,11 @@ merge_exons <- function(df) {
               sit0_pfam_exons <- sum(sit0$pfam_exons)
             }
 
-            
+
             ## Remove the rows that are associated with situation 0
             sit0_info <- sit0$info
             exon_library <- exon_library[!which(exon_library$info %in% sit0_info)]
-            
+
             ## Generate exon-flattened data in situtation 0
             sit0_final <- data.table("chr"=sit0_chr, "start"=sit0_start, "stop"=sit0_stop,
                                      "transcript_id"=sit0_transcript_id,
@@ -149,45 +164,56 @@ merge_exons <- function(df) {
           sit1 <- exon_library[tmp_start < start & tmp_stop > stop]$info
           #sit1 <- exon_library$info[15]
           if (length(sit1) > 0 & nrow(sit0) == 0) {
+            print("situation 1")
             #print(paste0("length: ", length(sit1)))
-            exon_library <- alter_exon(exon_library = exon_library, situation = "situation 1", tmp_info = tmp_info, 
-                                       tmp_start = tmp_start, tmp_stop = tmp_stop, tmp_pfam = tmp_pfam, 
-                                       sit_row = grep(sit1, exon_library$info), transcript = transcript)}
+            exon_library <- alter_exon(exon_library = exon_library, situation = "situation 1", tmp_info = tmp_info,
+                                       tmp_start = tmp_start, tmp_stop = tmp_stop, tmp_pfam = tmp_pfam,
+                                       sit_row = grep(sit1, exon_library$info), transcript = transcript)
+            }
       
           ## Situation (2):
-          sit2 <- exon_library[tmp_start < start & tmp_stop >= start & tmp_stop <= stop]$info
+          sit2 <- exon_library[tmp_start <= start & tmp_stop >= start & tmp_stop < stop]$info
           if (length(sit2) > 0 & nrow(sit0) == 0) {
+            print("situation 2")
             #print(paste0("length: ", length(sit2)))
-            exon_library <- alter_exon(exon_library = exon_library, situation = "situation 2", tmp_info = tmp_info, 
+            exon_library <- alter_exon(exon_library = exon_library, situation = "situation 2", tmp_info = tmp_info,
                                        tmp_start = tmp_start, tmp_stop = tmp_stop, tmp_pfam = tmp_pfam,
-                                       sit_row = grep(sit2, exon_library$info), transcript = transcript)}
+                                       sit_row = grep(sit2, exon_library$info), transcript = transcript)
+            }
           
           ## Situation (3): 
-          sit3 <- exon_library[tmp_start >= start & tmp_start <= stop & tmp_stop > stop]$info
+          sit3 <- exon_library[tmp_start > start & tmp_start <= stop & tmp_stop >= stop]$info
           if (length(sit3) > 0 & nrow(sit0) == 0) {
+            print("situation 3")
             #print(paste0("length: ", length(sit3)))
-            exon_library <- alter_exon(exon_library = exon_library, situation = "situation 3", tmp_info = tmp_info, 
+            exon_library <- alter_exon(exon_library = exon_library, situation = "situation 3", tmp_info = tmp_info,
                                        tmp_start = tmp_start, tmp_stop = tmp_stop, tmp_pfam = tmp_pfam,
                                        sit_row = grep(sit3, exon_library$info),
-                                       transcript = transcript)}
+                                       transcript = transcript)
+            }
 
           ## Situation (4): 
-          sit4 <- exon_library[tmp_start >= start & tmp_stop <= stop]$info
+          sit4 <- exon_library[tmp_start > start & tmp_stop < stop]$info
           if (length(sit4) > 0 & nrow(sit0) == 0) {
-            #print(paste0("t: ", t))
-            #print(paste0("r: ", r))
-            #print(paste0("length: ", length(sit4)))
+            print("situation 4")
+            print(tmp_info)
+            print(paste0("t: ", t))
+            print(paste0("r: ", r))
+            print(paste0("length: ", length(sit4)))
+            print(sit4)
             exon_library <- alter_exon(exon_library = exon_library, situation = "situation 4", tmp_info = tmp_info,
-                                       tmp_start = tmp_start, tmp_stop = tmp_stop, tmp_pfam = tmp_pfam, 
+                                       tmp_start = tmp_start, tmp_stop = tmp_stop, tmp_pfam = tmp_pfam,
                                        sit_row = grep(sit4, exon_library$info),
-                                       transcript = transcript)}
+                                       transcript = transcript)
+            }
 
           ## Situation (5): 
           if (length(c(sit1, sit2, sit3, sit4)) == 0 & nrow(sit0) == 0) {
+            print("situation 5")
             sit5_df <- data.table("chr"=tmp$chr[r],
                                   "start"=tmp_start,
-                                  "stop"=tmp_stop, 
-                                  "transcript_id"=transcript, 
+                                  "stop"=tmp_stop,
+                                  "transcript_id"=transcript,
                                   "gene_name"=x[2],
                                   "gene_id"=x[1],
                                   "pfam_exons"=tmp$pfam_exons[r],
@@ -196,11 +222,9 @@ merge_exons <- function(df) {
                                   "transcript_num"=1)
             exon_library <- rbind(exon_library, sit5_df)
           }
-          
-          
         }
-        
       }
+      exon_library
     }
     
     ## Store important information for the transcripts

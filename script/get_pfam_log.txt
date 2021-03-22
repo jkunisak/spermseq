@@ -1,351 +1,662 @@
+Loading required package: BiocFileCache
+Loading required package: dbplyr
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'AnnotationHub'
+
+The following object is masked from 'package:Biobase':
+
+    cache
+
+using temporary cache /var/folders/7k/759b3rss55v8fw4skgpkzsx40000gn/T//Rtmpf8Y0Z8/BiocFileCache
+snapshotDate(): 2020-04-27
+downloading 1 resources
+retrieving 1 resource
+loading from cache
+[1] "ENST00000673466" "AKT3"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 25 proteins ... 25 found
-Checking CDS and protein sequence lengths ... 25/25 OK
-Fetching CDS for 25 proteins ... 25 found
-Checking CDS and protein sequence lengths ... 25/25 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000263826" "AKT3"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000508376" "APC"            
+Fetching CDS for 26 proteins ... 26 found
+Checking CDS and protein sequence lengths ... 26/26 OK
+[1] "ENST00000257430" "APC"            
+Fetching CDS for 26 proteins ... 26 found
+Checking CDS and protein sequence lengths ... 26/26 OK
+[1] "ENST00000375320" "APOA1"          
 Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 0/1 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000375323" "APOA1"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000359492" "APOA1"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000236850" "APOA1"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000374690" "AR"             
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000675843" "ATM"            
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000452508" "ATM"            
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000278616" "ATM"            
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000288602" "BRAF"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000644969" "BRAF"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000646891" "BRAF"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000496384" "BRAF"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000357654" "BRCA1"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000471181" "BRCA1"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000352993" "BRCA1"          
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000461574" "BRCA1"          
+[1] "gene: BRCA1 with transcript: ENST00000461574 do not have any pfam information"
+[1] "ENST00000544455" "BRCA2"          
+Fetching CDS for 11 proteins ... 11 found
+Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "ENST00000380152" "BRCA2"          
+Fetching CDS for 11 proteins ... 11 found
+Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "ENST00000634840" "CBL"            
+Fetching CDS for 5 proteins ... 5 found
+Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "ENST00000264033" "CBL"            
+Fetching CDS for 5 proteins ... 5 found
+Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "ENST00000634586" "CBL"            
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000498124" "CDKN2A"         
+[1] "gene: CDKN2A with transcript: ENST00000498124 do not have any pfam information"
+[1] "ENST00000304494" "CDKN2A"         
+[1] "gene: CDKN2A with transcript: ENST00000304494 do not have any pfam information"
+[1] "ENST00000479692" "CDKN2A"         
+[1] "gene: CDKN2A with transcript: ENST00000479692 do not have any pfam information"
+[1] "ENST00000497750" "CDKN2A"         
+[1] "gene: CDKN2A with transcript: ENST00000497750 do not have any pfam information"
+[1] "ENST00000578845" "CDKN2A"         
+[1] "gene: CDKN2A with transcript: ENST00000578845 do not have any pfam information"
+[1] "ENST00000579755" "CDKN2A"         
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000382407" "CDY1B"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000306882" "CDY1B"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000361963" "CDY1"           
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000306609" "CDY1"           
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000349496" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000645982" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000646725" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000645276" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000450969" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000645210" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000405570" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000643031" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000642992" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000642315" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000646369" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000647390" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000644867" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000643977" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000433400" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000645320" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000643541" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000396183" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000642248" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000643992" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000643297" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000396185" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000644873" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000431914" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000642426" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000441708" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000453024" "CTNNB1"         
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000405239" "DAZ1"           
 Fetching CDS for 12 proteins ... 12 found
 Checking CDS and protein sequence lengths ... 12/12 OK
+[1] "ENST00000382510" "DAZ1"           
+Fetching CDS for 7 proteins ... 7 found
+Checking CDS and protein sequence lengths ... 7/7 OK
+[1] "ENST00000382440" "DAZ2"           
+Fetching CDS for 20 proteins ... 20 found
+Checking CDS and protein sequence lengths ... 20/20 OK
+[1] "ENST00000382431" "DAZ2"           
+Fetching CDS for 13 proteins ... 13 found
+Checking CDS and protein sequence lengths ... 13/13 OK
+[1] "ENST00000382294" "DAZ2"           
+Fetching CDS for 8 proteins ... 8 found
+Checking CDS and protein sequence lengths ... 8/8 OK
+[1] "ENST00000400493" "DAZ2"           
+Fetching CDS for 11 proteins ... 11 found
+Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "ENST00000382306" "DAZ2"           
+Fetching CDS for 15 proteins ... 15 found
+Checking CDS and protein sequence lengths ... 15/15 OK
+[1] "ENST00000382449" "DAZ2"           
+Fetching CDS for 15 proteins ... 15 found
+Checking CDS and protein sequence lengths ... 15/15 OK
+[1] "ENST00000382424" "DAZ2"           
+Fetching CDS for 16 proteins ... 16 found
+Checking CDS and protein sequence lengths ... 16/16 OK
+[1] "ENST00000449947" "DAZ2"           
+Fetching CDS for 9 proteins ... 9 found
+Checking CDS and protein sequence lengths ... 9/9 OK
+[1] "ENST00000382433" "DAZ2"           
+Fetching CDS for 16 proteins ... 16 found
+Checking CDS and protein sequence lengths ... 16/16 OK
+[1] "ENST00000382365" "DAZ3"           
+Fetching CDS for 11 proteins ... 11 found
+Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "ENST00000446723" "DAZ3"           
+Fetching CDS for 9 proteins ... 9 found
+Checking CDS and protein sequence lengths ... 9/9 OK
+[1] "ENST00000315357" "DAZ3"           
+Fetching CDS for 8 proteins ... 8 found
+Checking CDS and protein sequence lengths ... 8/8 OK
+[1] "ENST00000382314" "DAZ4"           
 Fetching CDS for 12 proteins ... 12 found
 Checking CDS and protein sequence lengths ... 12/12 OK
+[1] "ENST00000634662" "DAZ4"           
+Fetching CDS for 11 proteins ... 11 found
+Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "ENST00000382296" "DAZ4"           
+Fetching CDS for 14 proteins ... 14 found
+Checking CDS and protein sequence lengths ... 14/14 OK
+[1] "ENST00000399444" "DAZL"           
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000336079" "DDX3Y"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000360160" "DDX3Y"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000527414" "DICER1"         
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000343455" "DICER1"         
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000393063" "DICER1"         
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000526495" "DICER1"         
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000532939" "DICER1"         
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "ENST00000264709" "DNMT3A"         
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000321117" "DNMT3A"         
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000402667" "DNMT3A"         
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000380746" "DNMT3A"         
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000300853" "ERCC1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000589165" "ERCC1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000013807" "ERCC1"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000340192" "ERCC1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000423698" "ERCC1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000206249" "ESR1"           
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000338799" "ESR1"           
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000440973" "ESR1"           
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000443427" "ESR1"           
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000267430" "FANCM"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000554809" "FANCM"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000450632 and its transcript: ENST00000554809 at row: 1"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000450632 and its transcript: ENST00000554809 at row: 2"
+[1] "ENST00000351936" "FGFR2"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000346997" "FGFR2"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000358487" "FGFR2"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000457416" "FGFR2"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000369061" "FGFR2"          
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000613048" "FGFR2"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000613324" "FGFR2"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000481464 and its transcript: ENST00000613324 at row: 1"
+[1] "ENST00000638709" "FGFR2"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000491912 and its transcript: ENST00000638709 at row: 1"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000491912 and its transcript: ENST00000638709 at row: 2"
+[1] "ENST00000412135" "FGFR3"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000440486" "FGFR3"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000352904" "FGFR3"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000481110" "FGFR3"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000661429" "H3-3A"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000366815" "H3-3A"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000366816" "H3-3A"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000655399" "H3-3A"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000366813" "H3-3A"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000666609" "H3-3A"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000366814" "H3-3A"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000589599" "H3-3B"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000587560" "H3-3B"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000586607" "H3-3B"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000254810" "H3-3B"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000586270" "H3-3B"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000465403 and its transcript: ENST00000586270 at row: 1"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000465403 and its transcript: ENST00000586270 at row: 2"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000465403 and its transcript: ENST00000586270 at row: 3"
+[1] "ENST00000591890" "H3-3B"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000592643" "H3-3B"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000451590" "HRAS"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000311189" "HRAS"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000397596" "HRAS"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000397594" "HRAS"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000412167" "KIT"            
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000288135" "KIT"            
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000311936" "KRAS"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000256078" "KRAS"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000611712" "LIG4"           
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000405925" "LIG4"           
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000442234" "LIG4"           
+Fetching CDS for 6 proteins ... 6 found
+Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000307102" "MAP2K1"         
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000566326" "MAP2K1"         
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000262948" "MAP2K2"         
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000394867" "MAP2K2"         
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000401548" "MEI1"           
+[1] "gene: MEI1 with transcript: ENST00000401548 do not have any pfam information"
+[1] "ENST00000423900" "MEI1"           
+[1] "gene: MEI1 with transcript: ENST00000423900 do not have any pfam information"
+[1] "ENST00000231790" "MLH1"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000355774" "MLH3"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000380968" "MLH3"           
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000553713" "MLH3"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 1"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 2"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 3"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 4"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 5"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 6"
+[1] "ENST00000375703" "MSH5"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000375755" "MSH5"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000375750" "MSH5"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000425703" "MSH5"           
+[1] "gene: MSH5 with transcript: ENST00000425703 do not have any pfam information"
+[1] "ENST00000429846" "MSH5"           
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000358273" "NF1"            
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000356175" "NF1"            
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000373588" "NR5A1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000265849" "PMS2"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000305921" "PPM1D"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000308677" "PRKACA"         
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000303728" "PRY"            
+[1] "gene: PRY with transcript: ENST00000303728 do not have any pfam information"
+[1] "ENST00000429896" "PTCH1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000437951" "PTCH1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000421141" "PTCH1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000375274" "PTCH1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000430669" "PTCH1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000331920" "PTCH1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000418258" "PTCH1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000551630" "PTCH1"          
+[1] "gene: PTCH1 with transcript: ENST00000551630 do not have any pfam information"
+[1] "ENST00000635625" "PTPN11"         
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000351677" "PTPN11"         
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000251849" "RAF1"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000442415" "RAF1"           
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000299440" "RAG1"           
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000267163" "RB1"            
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000347869" "RBM5"           
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000355710" "RET"            
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 6 proteins ... 6 found
-Checking CDS and protein sequence lengths ... 6/6 OK
-Fetching CDS for 6 proteins ... 6 found
-Checking CDS and protein sequence lengths ... 6/6 OK
-Fetching CDS for 6 proteins ... 6 found
-Checking CDS and protein sequence lengths ... 6/6 OK
-Fetching CDS for 6 proteins ... 6 found
-Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "ENST00000638465" "RET"            
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000491505 and its transcript: ENST00000638465 at row: 1"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000491505 and its transcript: ENST00000638465 at row: 2"
+[1] "ENST00000342988" "SMAD4"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
-PF00636 is not found in any exons of ENST00000556045 (gene: DICER1)
+[1] "ENST00000398417" "SMAD4"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 0/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 0/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Only start coordinate of pfam domain: PF13927 is within an exon
-PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
-PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
-PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
-PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
-PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
-PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
-PF07714 is not found in any exons of ENST00000260795 (gene: FGFR3)
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 0/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 6 proteins ... 6 found
-Checking CDS and protein sequence lengths ... 6/6 OK
-Fetching CDS for 6 proteins ... 6 found
-Checking CDS and protein sequence lengths ... 6/6 OK
-Fetching CDS for 6 proteins ... 6 found
-Checking CDS and protein sequence lengths ... 6/6 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 0/1 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 4 proteins ... 4 found
-Checking CDS and protein sequence lengths ... 4/4 OK
-Fetching CDS for 3 proteins ... 3 found
-Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "ENST00000395038" "SOS1"           
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "ENST00000404395" "STAT3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000588969" "STAT3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000264657" "STAT3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000326873" "STK11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000652231" "STK11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000586243" "STK11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000392927" "SYCP3"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000266743" "SYCP3"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000392924" "SYCP3"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000374333" "TEX11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000395889" "TEX11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000344304" "TEX11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000374320" "TEX11"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000643185" "TEX15"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000638951" "TEX15"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "ENST00000256246" "TEX15"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000298171" "TSHR"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
-PF02165 is not found in any exons of ENST00000332351 (gene: WT1)
-PF02165 is not found in any exons of ENST00000332351 (gene: WT1)
-Fetching CDS for 1 proteins ... 1 found
-Checking CDS and protein sequence lengths ... 1/1 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
-Fetching CDS for 2 proteins ... 2 found
-Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000541158" "TSHR"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000651177" "USP9Y"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000338981" "USP9Y"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000453031" "USP9Y"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 0/1 OK
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000406876 and its transcript: ENST00000453031 at row: 1"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000406876 and its transcript: ENST00000453031 at row: 2"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000406876 and its transcript: ENST00000453031 at row: 3"
+[1] "ENST00000256474" "VHL"            
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000345392" "VHL"            
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000332351" "WT1"            
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000639563" "WT1"            
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000379079" "WT1"            
+Fetching CDS for 5 proteins ... 5 found
+Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "ENST00000530998" "WT1"            
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "ENST00000375128" "XPA"            
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "ENST00000262887" "XRCC1"          
+Fetching CDS for 3 proteins ... 3 found
+Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "ENST00000543982" "XRCC1"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
