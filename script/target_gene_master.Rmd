@@ -28,13 +28,13 @@ cd ~/git/spermseq/twinstrand_target_gene_set
 ## Sort and unique 
 cat target_genes.txt | sort | uniq > target_genes_v1.txt
 ## Copy to kingspeak directory
-scp target_genes_v1.txt u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets
+scp target_genes_v1.txt u1240855@kingspeak.chpc.utah.edu:~/spermseq/twinstrand_targets/
 ```
 ## GRCh38 GTF File
 Use the build 38 GTF file to get other identifying information for each gene_name of interest. Look only at genes/regions that are coding sequences (hence grep -w "CDS" in the below command...)
 ```{bash, eval=FALSE}
 ## Define directory
-cd ~/spermseq/twinstrand_target
+cd ~/spermseq/twinstrand_targets/
 
 ## Download GTF file 
 wget ftp://ftp.ensembl.org/pub/release-102/gtf/homo_sapiens/Homo_sapiens.GRCh38.102.gtf.gz | zless | grep -w "CDS" > Homo_sapiens.GRCh38.102.CDS.gtf
@@ -132,6 +132,13 @@ library(ggpubr)
 library(biomaRt)
 library(ensembldb)
 library(EnsDb.Hsapiens.v86)
+library(AnnotationHub)
+
+
+####################################################
+##### Define the mart and database for biomaRt #####
+####################################################
+ensembl <- useMart("ENSEMBL_MART_ENSEMBL", host = "http://nov2020.archive.ensembl.org", dataset = "hsapiens_gene_ensembl") ## Ensembl Genes 102
 
 ##################################
 ##### Specify file locations #####
@@ -151,27 +158,38 @@ genes <- c("WT1", "CDC14A", "DMRT1", "KLHL10", "M1AP", "MEI1", "STAG3",
            "KIT", "KRAS", "LIG4", "MAP2K1", "MAP2K2", "MLH1", "MLH3", "MSH5", "NR5A1", "NF1", 
            "PMS2", "PPM1D", "PRKACA", "PTCH1", "PTPN11", "RAG1", "RAF1", "RB1", "RET", "SMAD4", 
            "SOS1", "STAT3", "STK11", "TEX14", "TEX15", "TSHR", "VHL", "XPA", "XRCC1")
-moderate_genes <- c("USP26", "TEX14", "SYCP2", "STAG3", "PKD1", "M1AP", "KLHL10", "DMRT1", "CDC14A")
-moderate_gene_ids <- c("ENSG00000134588", "ENSG00000121101", "ENSG00000196074", "ENSG00000066923", "ENSG00000008710", "ENSG00000159374", "ENSG00000161594", "ENSG00000137090", "ENSG00000079335")
-genes <- genes[-which(genes %in% moderate_genes)]
-genes <- c(genes, "USP9Y", "DDX3Y", "PRY", "DAZ1", "DAZ2", "DAZ3", "DAZ4", "DAZL", "CDY1", "CDY1B", "RBM5")
+# moderate_genes <- c("USP26", "TEX14", "SYCP2", "STAG3", "PKD1", "M1AP", "KLHL10", "DMRT1", "CDC14A")
+# moderate_gene_ids <- c("ENSG00000134588", "ENSG00000121101", "ENSG00000196074", "ENSG00000066923", "ENSG00000008710", "ENSG00000159374", "ENSG00000161594", "ENSG00000137090", "ENSG00000079335")
+moderate_genes <- c("")
+moderate_gene_ids <- c()
+# genes <- genes[-which(genes %in% moderate_genes)]
+genes <- c(genes, "USP9Y", "DDX3Y", "PRY", "DAZ1", "DAZ2", "DAZ3", "DAZ4", "DAZL", "CDY1", "CDY1B", "RBM5", "TDRD9", "PNLDC1", "DCAF12L1")
 
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata")) {
+  load("~/git/spermseq/script/final_all_genes.Rdata")
+}
+
+## Save the workspace image for inputs
+#save.image(file = "~/git/spermseq/script/input.Rdata")
 ```
 
 ## Get TPM data from GTEx testis samples
 ```{r}
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
   source("~/git/spermseq/script/testis_GTEx_samples.R")
   testis_GTEx_tpm <- testis_GTEx_samples(GTEx_file = GTEx_file, GTEx_samples = GTEx_samples)
   head(testis_GTEx_tpm)
 }
+```
+```{r, eval=FALSE}
+testis_GTEx_tpm$gene_id %>% unique %>% length
 ```
 
 ## Read in the APPRIS isoform data
 See [APPRIS](https://github.com/appris/appris/tree/master/data) for column details... 
 **SANITY CHECK:** This steps check that each gene of interest has an APPRIS isoform tag. If not, it will obtain the gene_id from [biomaRt](http://uswest.ensembl.org/biomart/martview/d22e39c1bfd36e356ee213ba770cb249) using the gene_name. No transcript_ids or CCDS_id will be obtained and the 'status' column will be flagged with a "minor" APPRIS designation. 
 ```{r}
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
   source("~/git/spermseq/script/appris_manipulation.R")
   appris_df <- appris_manipulation(appris_file = appris_file, genes = genes) 
   head(appris_df)
@@ -180,13 +198,11 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
 
 ## Get the GTEx testis TPM data of each APPRIS transcript
 ```{r}
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
-  
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
   source("~/git/spermseq/script/appris_manipulation.R")
   appris_df_tpm <- get_appris_tpm(appris_df = appris_df, testis_GTEx_tpm = testis_GTEx_tpm)
   appris_df_tpm <- data.table(do.call("rbind", appris_df_tpm)) %>% `colnames<-`(c("gene_name", "gene_id", "transcript_id", "CCDS", "status", "avg_GTEx_TPM", "appris", "GTEx"))
   appris_df_tpm
-
 }
 ```
 
@@ -196,11 +212,11 @@ These are transcripts that are not identified as **PRINCIPAL** isoforms by **APP
 **NOTE: The GTEx-only transcript must have an avg TPM > 1 across all testis samples to be included in the dataset**
 
 ```{r}
-  if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
-    source("~/git/spermseq/script/gtex_transcript_tpm_manipulation.R")
-    appris_gtex_transcript_tpm <- gtex_transcript_tpm_manipulation(appris_df_tpm = appris_df_tpm, testis_GTEx_tpm = testis_GTEx_tpm, moderate_gene_ids = moderate_gene_ids)
-    appris_gtex_transcript_tpm
-  }
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
+  source("~/git/spermseq/script/gtex_transcript_tpm_manipulation.R")
+  appris_gtex_transcript_tpm <- gtex_transcript_tpm_manipulation(appris_df_tpm = appris_df_tpm, testis_GTEx_tpm = testis_GTEx_tpm, moderate_gene_ids = moderate_gene_ids)
+  appris_gtex_transcript_tpm
+}
 ```
 
 ## Use GTF file to get exon positions within each transcript (multiple transcripts belong to the same gene)
@@ -208,14 +224,14 @@ These are transcripts that are not identified as **PRINCIPAL** isoforms by **APP
 ### Explanation of output: 
 1) 
 ```{r get-gtf-coordinates}
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
 
   # This is the longest step, see if the data already exists
-  if (file.exists("~/git/spermseq/script/gtf_df.Rdata")) {
-    load("~/git/spermseq/script/gtf_df.Rdata")
+  if (file.exists("~/git/spermseq/script/gtf_df_all_genes.Rdata")) {
+    load("~/git/spermseq/script/gtf_df_all_genes.Rdata")
   }
   
-  if (!file.exists("~/git/spermseq/script/gtf_df.Rdata")) {
+  if (!file.exists("~/git/spermseq/script/gtf_df_all_genes.Rdata")) {
     ## Read in the gtf file 
     gtf <- fread(gtf_file, header=FALSE) %>% .[,c(1,4,5,9)] %>% `colnames<-` (c("chr", "start", "stop", "info")) 
     
@@ -223,7 +239,7 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
     source("~/git/spermseq/script/gtf_manipulation.R")
     gtf_df <- gtf_manipulation(gtf = gtf, df = appris_gtex_transcript_tpm)
     gtf_df
-    save.image("~/git/spermseq/script/gtf_df.Rdata")
+    save.image("~/git/spermseq/script/gtf_df_all_genes.Rdata")
     
     ## Write output to text file 
     write.table(x = gtf_df, file = "~/git/spermseq/twinstrand_target_gene_set/output/appris_gtex_gtf_testis.txt",
@@ -236,20 +252,20 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
 gtf[which(gtf$transcript_biotype != "protein_coding" & gtf$appris == 0 & gtf$GTEx == 1)]
 
 # Check "PPM1D"  "PRKACA" "RB1"    "DDX3Y"  "RBM5" 
-gtf_df[gene_name %in% c("PPM1D", "PRKACA", "RB1", "DDX3Y", "RBM5", "MLH1")]
+gtf_df[gene_name %in% c("TDRD9", "PNLDC1", "DCAF12L1")]
 ```
 
 ## Get the Pfam domain information for each exon 
 ![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/powerpoint/merge_exon_schematic.png)
 ```{r get-pfam-domains, message=FALSE}
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
   
   ## See if pfam data already exists
-  if (file.exists("~/git/spermseq/script/pfam_df.Rdata")) {
-    load("~/git/spermseq/script/pfam_df.Rdata")
+  if (file.exists("~/git/spermseq/script/pfam_df_all_genes.Rdata")) {
+    load("~/git/spermseq/script/pfam_df_all_genes.Rdata")
   }
   
-  if (!file.exists("~/git/spermseq/script/pfam_df.Rdata")) {
+  if (!file.exists("~/git/spermseq/script/pfam_df_all_genes.Rdata")) {
     ## Output the warning messages of the pfam domain exon analysis 
     if (file.exists("~/git/spermseq/script/get_pfam_log.txt")) {
       file.remove("~/git/spermseq/script/get_pfam_log.txt")
@@ -262,13 +278,18 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
     
     ## Run the function
     source("~/git/spermseq/script/get_pfam.R")
-    pfam_df <- get_pfam(df = gtf_df)
+    
+    ## Get the ensembl human GRCh38 v101 annotation dataset
+    ah <- AnnotationHub()
+    query(ah, "EnsDb.Hsapiens.v101")
+    edb <- ah[["AH83216"]]
+    pfam_df <- get_pfam(df = gtf_df, ensembl = ensembl, edb=edb)
     
     ## Output the data
     pfam_df
     
     ## Save image
-    save.image("~/git/spermseq/script/pfam_df.Rdata")
+    save.image("~/git/spermseq/script/pfam_df_all_genes.Rdata")
   
     ## Revert output back to the console
     sink(type = "message")
@@ -285,15 +306,43 @@ if (length(wtf) != length(genes)) {
   wtf_genes
   gtf_df[gene_name %in% wtf_genes]
 }
-pfam_df[gene_name %in% c("PPM1D", "PRKACA", "RB1", "DDX3Y", "RBM5", "MLH1")]
+pfam_df[gene_name %in% c("MEI1", "PRY", "DCAF12L1", "M1AP")]$pfam_id %>% unique
 ```
+## Manually look at protein coordinates of uniprot domains for genes with CDS's that could not be found 
+```{r uniprot_domain_mapping}
+if (!file.exists("~/git/spermseq/script/final_all_genes.Rdata")) {
+  source("~/git/spermseq/script/map_uniprot_domains.R")
+  
+  ## Read in uniprot domian data for transcripts that did not have functional domains from biomaRt
+  uniprot <- fread("~/git/spermseq/twinstrand_target_gene_set/output/add_uniprot_domains.txt", header = TRUE)
+
+  uniprot_mapped <- map_uniprot_domains(uniprot = uniprot, gtf_df = gtf_df, ensembl = ensembl)
+  uniprot_mapped[gene_name %in% c("MEI1", "PRY", "DCAF12L1", "M1AP")]
+}
+```
+
+## Merge the uniprot and pfam data
+```{r}
+if (!file.exists("~/git/spermseq/script/final_all_genes.Rdata")) {
+  ## Remove transcripts with uniprot data from pfam data
+  uniprot_transcripts <- uniprot$transcript_id %>% unique
+  temp <- pfam_df[!(transcript_id %in% uniprot_transcripts)]
+  
+  final_domain_merged <- rbind(temp, uniprot_mapped)
+  final_domain_merged
+}
+```
+
+
+
+
 
 ## Merge overlapping exons across transcripts of the same gene
 ![Schematic depicting how different exons across isoforms of a gene are merged.](/Users/jasonkunisaki/git/spermseq/powerpoint/merge_exon_schematic.png)
 ```{r merge-exons, message=FALSE, eval=TRUE}
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
   source("~/git/spermseq/script/merge_exons.R")
-  merged_exons <- merge_exons(df = pfam_df)
+  merged_exons <- merge_exons(df = final_domain_merged)
   
   ## Get the total panel space (exonic)
   total <- sum(merged_exons$exon_size)
@@ -309,10 +358,11 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
   ## Write the output file 
   write.table(x = merged_exons, file = paste0("~/git/spermseq/twinstrand_target_gene_set/output/merged_exons.txt"), 
               quote = FALSE, sep = "\t", row.names = FALSE)
+  merged_exons
 }
 ```
 ```{r, eval=FALSE}
-merged_exons[gene_name == "CDY1"]
+merged_exons[gene_name %in% c("MEI1", "PRY", "DCAF12L1", "M1AP")]
 ```
 
 
@@ -379,7 +429,7 @@ scp u1240855@kingspeak.chpc.utah.edu:~/spermseq/data/hotspots/hg19ToHg38.over.ch
 ## Identify exons with 1+ cancer 3D hotspot mutation 
 ```{r get-3d-hotspot}
 ## Exons with 3d hotspot mutations 
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
   source("~/git/spermseq/script/format_hotspot.R")
   merged_exons_3d_hotspot <- format_3D_hotspot(hotspot_file = "~/git/spermseq/twinstrand_target_gene_set/data/3d_hotspots_gao.txt",
                                                genes = genes, merged_exons = merged_exons)
@@ -390,7 +440,7 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
 ```{r get-hotspot}
 ## Exons with snp/onp/ins/del hotspot mutations
 
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
   source("~/git/spermseq/script/format_hotspot.R")
   hotspot_file <- "~/git/spermseq/twinstrand_target_gene_set/data/cancerhotspots.v2.proteincoding.columns.maf"
   merged_exons_hotspot <- format_hotspot(hotspot_file = hotspot_file, genes = genes, merged_exons_3d_hotspot = merged_exons_3d_hotspot)
@@ -403,7 +453,7 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
 
 ## Calcualte GC content of exons from merged exon list 
 ```{r, message=FALSE}
-if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == FALSE) {
 
   ## Load in necessary packages
   library(BSgenome.Hsapiens.UCSC.hg38)
@@ -426,15 +476,26 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == FALSE) {
   
   ## Get the gc content of each sequence 
   merged_exons_hotspot$gc_content <- GetGC(bsgenome = BSgenome.Hsapiens.UCSC.hg38, gr = gr)
-  write.table(x = merged_exons_hotspot, file = "~/git/spermseq/twinstrand_target_gene_set/output/merged_exons_final.txt",
+  
+  ## Get the file name 
+  if (length(genes) == 76) {
+    filename <- "~/git/spermseq/twinstrand_target_gene_set/output/merged_exons_all_genes.txt"
+  }
+  if (length(genes) == 69) {
+    filename <- "~/git/spermseq/twinstrand_target_gene_set/output/merged_exons_some_moderate_genes.txt"
+  } 
+  if (length(genes) == 64) {
+    filename <- "~/git/spermseq/twinstrand_target_gene_set/output/merged_exons_no_moderate_genes.txt"
+  }
+  write.table(x = merged_exons_hotspot, file = filename,
               sep = "\t", quote = FALSE, row.names = FALSE)
   
   ## Save the data
-  save.image("~/git/spermseq/script/final.Rdata")
+  save.image("~/git/spermseq/script/final_all_genes.Rdata")
 }
 
-if (file.exists("~/git/spermseq/script/final.Rdata") == TRUE) {
-  load("~/git/spermseq/script/final.Rdata")
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == TRUE) {
+  load("~/git/spermseq/script/final_all_genes.Rdata")
 }
 ```
 
@@ -445,7 +506,7 @@ if (file.exists("~/git/spermseq/script/final.Rdata") == TRUE) {
 ### Exons in functional domains and harbor hotspots
 ```{r}
 ## Filter out exons/rows that have NA values in pfam_id column
-merged_exons_pfam <- na.omit(merged_exons_hotspot)
+merged_exons_pfam <- merged_exons_hotspot[!is.na(merged_exons_hotspot$pfam_id), ]
 merged_exons_pfam_hotspot <- merged_exons_pfam[hotspot_3d_exon_num > 0 | hotspot_exon_num > 0]
 
 ## Calculate proportion of panel space taken up by each gene 
@@ -469,7 +530,7 @@ p
 ### Exons in functional domains 
 ```{r}
 ## Filter out exons/rows that have NA values in pfam_id column
-merged_exons_pfam <- na.omit(merged_exons_hotspot)
+merged_exons_pfam <- merged_exons_hotspot[!is.na(merged_exons_hotspot$pfam_id), ]
 
 ## Calculate proportion of panel space taken up by each gene 
 total <- sum(merged_exons_pfam$exon_size)
@@ -555,11 +616,23 @@ p
 ```
 
 # Archive
-```{bash}
+```{r}
 
 ```
 
 ```{r}
-
+if (file.exists("~/git/spermseq/script/final_all_genes.Rdata") == TRUE) {
+  ## Get number of exons per gene
+  sum(rbindlist(lapply(genes, function(gene, merged_exons_pfam){
+    temp <- merged_exons_pfam[gene_name == gene]
+    num <- nrow(temp)
+    return(data.table("num"=num))
+  }, merged_exons_pfam=merged_exons_pfam)))/length(genes)
+  
+  df <- merged_exons_pfam[, colnames(merged_exons_pfam) %in% c("chr", "start", "stop", "gene_name"), with=FALSE]
+  df$start <- df$start - 1
+  colnames(df) <- c("chorm", "chromStart", "chromEnd", "gene_name")
+  write.table(x = df, file = gsub(pattern = ".txt", replacement = "_proper.bed", x = filename), quote = FALSE, row.names = FALSE, sep = "\t")
+}
 ```
 

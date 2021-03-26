@@ -7,9 +7,10 @@ library(ensembldb)
 library(EnsDb.Hsapiens.v86)
 library(AnnotationHub)
 library(biomaRt)
+options(warn = 1)
 
 #df <- gtf_df
-get_pfam <- function(df) {
+get_pfam <- function(df, ensembl, edb) {
   ###########################################################################
   ##### SANITY: Initiate file to store transcripts without pfam domains #####
   ###########################################################################
@@ -23,15 +24,6 @@ get_pfam <- function(df) {
   
   ## Get the transcript_ids
   transcript_ids <- df[, c("transcript_id", "gene_name"), with=FALSE] %>% unique() %>% transpose(.) %>% as.list(.) %>% unname(.)
-  
-  ## Get the ensembl human GRCh38 v101 annotation dataaset
-  ah <- AnnotationHub()
-  query(ah, "EnsDb.Hsapiens.v101")
-  edb <- ah[["AH83216"]]
-  
-  ## Define mart and dataset for biomart
-  ensembl <- useMart("ENSEMBL_MART_ENSEMBL", host = "http://nov2020.archive.ensembl.org", dataset = "hsapiens_gene_ensembl") ## Ensembl Genes 102
-  
   
   ## Iterate through each transcript and get the pfam domain information for each exon
   x <- transcript_ids[[99]] ## FGFR2 
@@ -76,7 +68,9 @@ get_pfam <- function(df) {
     ###############################################################################
     if (nrow(pfam) == 0 | any(is.na(pfam))) {
       print(paste0("gene: ", x[2], " with transcript: ", x[1], " do not have any pfam information"))
-      write(x[1], file = "~/git/spermseq/twinstrand_target_gene_set/output/gene_transcripts_no_pfam.txt", append=TRUE)
+
+      dummy <- paste0(x, collapse = "\t")
+      write(dummy, file = "~/git/spermseq/twinstrand_target_gene_set/output/gene_transcripts_no_pfam.txt", append=TRUE)
       return(transcript_df)
     }
     
@@ -95,18 +89,18 @@ get_pfam <- function(df) {
     pfam2g <- proteinToGenome(pfam_genomic, edb)
     
     ## Get the pfam genomic coordinates and pfam_id --> save as a data.table()
+    ## Iterate through each domain (p) and each exon contributing to a given domain (w)
     pfam_df <- data.table()
-    p=1
-    w=1
     for (p in 1:length(pfam_id)) {
       for (w in 1:nrow(pfam2g[[p]]@elementMetadata)) {
+        ## Get the boolean to see if the correct CDS was found
         cds_ok_bool <- pfam2g[[p]]@elementMetadata$cds_ok[w]
         
+        ## If the correct CDS was found: make the dataset
         if (cds_ok_bool == TRUE) {
           pfamID <- pfam_id[p]
           pfam_gstart <- pfam2g[[p]]@ranges@start[w]
           pfam_gstop <- pfam2g[[p]]@ranges@start[w] + pfam2g[[p]]@ranges@width[w] - 1
-          
           pfam_df <- rbind(pfam_df, data.table("pfam_id"=pfamID,
                                                "pfam_genomic_start"=pfam_gstart,
                                                "pfam_genomic_stop"=pfam_gstop)) 
@@ -115,26 +109,55 @@ get_pfam <- function(df) {
         ############################################################################################################
         ##### SANITY: Check if there was a 'Could not find a CDS whith the expected length for protein:' error #####
         ############################################################################################################
-        
         if (cds_ok_bool == FALSE) {
           warning_message <- paste0("Could not find a CDS whith the expected length for protein: ", pfam_pid,
-                                    " and its transcript: ", x[1], " at row: ", w)
+                                    " and its transcript: ", x[1], " at row: ", w, "... including entire cds for this transcript")
           print(warning_message)
-          
-          dummy <- paste0(x[2], "\t", x[1])
-          
+          print(pfam_df)
+          print(transcript_df)
+          dummy <- paste0(x, collapse = "\t")
           write(dummy, "~/git/spermseq/twinstrand_target_gene_set/output/gene_transcripts_no_CDS_of_expected_length.txt", append = TRUE)
+          
+          transcript_df$pfam_id <- "including entire cds for this transcript"
+          return(transcript_df)
         }
-        
       }
     }
-    ###############################################################################
-    ##### SANITY: Check if there are a non-zero amount of rows with pfam data #####
-    ###############################################################################
     
-    if (nrow(pfam_df) == 0) {
-      return(transcript_df)
+    ############################################################################################
+    ##### SANITY: Check if the exon positions used in the edb are the same as the GTF file #####
+    ############################################################################################
+    ## Get the coding sequence exons for the gene of interest (x[2])
+    cds <- cdsBy(edb, by = "tx", filter = ~ tx_id == x[1])
+    
+    #############################################################
+    #### Check 1: see if there are the same number of exons #####
+    cds_exons <- cds[[1]]
+    gtf_exons <- df[transcript_id == x[1]]
+    cds_exon_num <- length(cds_exons@elementMetadata$exon_rank)
+    gtf_exon_num <- nrow(gtf_exons)
+    if (cds_exon_num != gtf_exon_num) {
+      warning_message <- paste0("The number of exons in gene's", x[2], " transcript: ", x[1], " does not match in the edb used (v101): ", cds_exon_num, 
+                                " and the gtf file (v102): ", gtf_exon_num, "...PLEASE LOOK INTO THIS...")
+      print(warning_message)
+      stop()
     }
+    ###################################################
+    ## Check 2: see if the positions of the exons match 
+    exon_num <- 1
+    for (exon_num in 1:cds_exon_num) {
+      ## Get the start/stop coordinates in the edb and gtf file
+      cds_start_stop <- paste0(cds_exons@ranges@start[exon_num], "-", (cds_exons@ranges@start[exon_num] + cds_exons@ranges@width[exon_num] -1))
+      gtf_start_stop <- paste0(gtf_exons$start[exon_num], "-", gtf_exons$stop[exon_num])
+      
+      ## Perform the comparison
+      if (cds_start_stop != gtf_start_stop) {
+        warning_message <- paste0("The start/stop coordinates of exon ", exon_num, " of gene's ", x[2], " transcript: ", x[1], " are not equivalent in the ",
+                                  "edb dataset (v101):", cds_start_stop, " and the gtf file (v102):", gtf_start_stop, "... PLEASE LOOK INTO THIS")
+        print(warning_message)
+      }
+    }
+    
     
     ## Go through each pfam domain and identify which exons reside in those regions (at least partially)
     i=6
@@ -168,13 +191,11 @@ get_pfam <- function(df) {
         ## See above: the pfam_id column in the transcript_df column is already initiated to NAs
         if (is.na(transcript_df$pfam_id[pfam_gstart_exon])) {
           transcript_df$pfam_id[pfam_gstart_exon] <- pfam_domain
-          transcript_df$pfam_exons[pfam_gstart_exon] <- transcript_df$pfam_exons[pfam_gstart_exon] + 1
         }
         if (!is.na(transcript_df$pfam_id[pfam_gstart_exon]) & length(grep(pfam_domain, x = transcript_df$pfam_id[pfam_gstart_exon])) == 0) {
           transcript_df$pfam_id[pfam_gstart_exon] <- paste0(transcript_df$pfam_id[pfam_gstart_exon], "|", pfam_domain)
-          transcript_df$pfam_exons[pfam_gstart_exon] <- transcript_df$pfam_exons[pfam_gstart_exon] + 1
-          
         }
+        transcript_df$pfam_exons[pfam_gstart_exon] <- transcript_df$pfam_exons[pfam_gstart_exon] + 1
       }
       
       if ((length(pfam_gstart_exon) == 1 & length(pfam_gstop_exon) != 1)) {
@@ -183,13 +204,11 @@ get_pfam <- function(df) {
         ## Also chceck to make sure that the pfam domain is not already annotated in the transcript at a given exon
         if (is.na(transcript_df$pfam_id[pfam_gstart_exon])) {
           transcript_df$pfam_id[pfam_gstart_exon] <- pfam_domain
-          transcript_df$pfam_exons[pfam_gstart_exon] <- transcript_df$pfam_exons[pfam_gstart_exon] + 1
         }
         if (!is.na(transcript_df$pfam_id[pfam_gstart_exon]) & length(grep(pfam_domain, x = transcript_df$pfam_id[pfam_gstart_exon])) == 0) {
           transcript_df$pfam_id[pfam_gstart_exon] <- paste0(transcript_df$pfam_id[pfam_gstart_exon], "|", pfam_domain)
-          transcript_df$pfam_exons[pfam_gstart_exon] <- transcript_df$pfam_exons[pfam_gstart_exon] + 1
-          
         }
+        transcript_df$pfam_exons[pfam_gstart_exon] <- transcript_df$pfam_exons[pfam_gstart_exon] + 1
       }
       
       ## Where only the pfam domain stop coordinate is within an exon 
@@ -200,12 +219,12 @@ get_pfam <- function(df) {
         ## See if the pfam domain column is na --> if so, put in pfam domain, if not, add "|" 
         if (is.na(transcript_df$pfam_id[pfam_gstop_exon])) {
           transcript_df$pfam_id[pfam_gstop_exon] <- pfam_domain
-          
         }
-        if (!is.na(transcript_df$pfam_id[pfam_gstart_exon]) & length(grep(pfam_domain, x = transcript_df$pfam_id[pfam_gstop_exon])) == 0) {
+        if (!is.na(transcript_df$pfam_id[pfam_gstop_exon]) & length(grep(pfam_domain, x = transcript_df$pfam_id[pfam_gstop_exon])) == 0) {
           transcript_df$pfam_id[pfam_gstop_exon] <- paste0(transcript_df$pfam_id[pfam_gstop_exon], "|", pfam_domain)
         }
-        transcript_df$pfam_id[pfam_gstop_exon] <- paste0(transcript_df$pfam_id[pfam_gstop_exon], "|", pfam_domain)
+        transcript_df$pfam_exons[pfam_gstop_exon] <- transcript_df$pfam_exons[pfam_gstop_exon] + 1
+        #transcript_df$pfam_id[pfam_gstop_exon] <- paste0(transcript_df$pfam_id[pfam_gstop_exon], "|", pfam_domain)
       }
       # print(i)
       # print(pfam_gstart_exon)

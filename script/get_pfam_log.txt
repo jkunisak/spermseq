@@ -1,20 +1,4 @@
-Loading required package: BiocFileCache
-Loading required package: dbplyr
-
-Attaching package: 'dbplyr'
-
-The following objects are masked from 'package:dplyr':
-
-    ident, sql
-
-
-Attaching package: 'AnnotationHub'
-
-The following object is masked from 'package:Biobase':
-
-    cache
-
-using temporary cache /var/folders/7k/759b3rss55v8fw4skgpkzsx40000gn/T//Rtmpf8Y0Z8/BiocFileCache
+using temporary cache /var/folders/7k/759b3rss55v8fw4skgpkzsx40000gn/T//RtmpthKNYA/BiocFileCache
 snapshotDate(): 2020-04-27
 downloading 1 resources
 retrieving 1 resource
@@ -22,77 +6,113 @@ loading from cache
 [1] "ENST00000673466" "AKT3"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 13 of gene's AKT3 transcript: ENST00000673466 are not equivalent in the edb dataset (v101):243505249-243505334 and the gtf file (v102):243505252-243505334... PLEASE LOOK INTO THIS"
 [1] "ENST00000263826" "AKT3"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 13 of gene's AKT3 transcript: ENST00000263826 are not equivalent in the edb dataset (v101):243505249-243505334 and the gtf file (v102):243505252-243505334... PLEASE LOOK INTO THIS"
 [1] "ENST00000508376" "APC"            
 Fetching CDS for 26 proteins ... 26 found
 Checking CDS and protein sequence lengths ... 26/26 OK
+[1] "The start/stop coordinates of exon 15 of gene's APC transcript: ENST00000508376 are not equivalent in the edb dataset (v101):112837553-112844126 and the gtf file (v102):112837553-112844123... PLEASE LOOK INTO THIS"
 [1] "ENST00000257430" "APC"            
 Fetching CDS for 26 proteins ... 26 found
 Checking CDS and protein sequence lengths ... 26/26 OK
+[1] "The start/stop coordinates of exon 15 of gene's APC transcript: ENST00000257430 are not equivalent in the edb dataset (v101):112837553-112844126 and the gtf file (v102):112837553-112844123... PLEASE LOOK INTO THIS"
 [1] "ENST00000375320" "APOA1"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's APOA1 transcript: ENST00000375320 are not equivalent in the edb dataset (v101):116835808-116836411 and the gtf file (v102):116835811-116836411... PLEASE LOOK INTO THIS"
 [1] "ENST00000375323" "APOA1"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's APOA1 transcript: ENST00000375323 are not equivalent in the edb dataset (v101):116835808-116836411 and the gtf file (v102):116835811-116836411... PLEASE LOOK INTO THIS"
 [1] "ENST00000359492" "APOA1"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's APOA1 transcript: ENST00000359492 are not equivalent in the edb dataset (v101):116835808-116836411 and the gtf file (v102):116835811-116836411... PLEASE LOOK INTO THIS"
 [1] "ENST00000236850" "APOA1"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's APOA1 transcript: ENST00000236850 are not equivalent in the edb dataset (v101):116835808-116836411 and the gtf file (v102):116835811-116836411... PLEASE LOOK INTO THIS"
 [1] "ENST00000374690" "AR"             
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 8 of gene's AR transcript: ENST00000374690 are not equivalent in the edb dataset (v101):67723686-67723841 and the gtf file (v102):67723686-67723838... PLEASE LOOK INTO THIS"
 [1] "ENST00000675843" "ATM"            
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 62 of gene's ATM transcript: ENST00000675843 are not equivalent in the edb dataset (v101):108365325-108365508 and the gtf file (v102):108365325-108365505... PLEASE LOOK INTO THIS"
 [1] "ENST00000452508" "ATM"            
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 62 of gene's ATM transcript: ENST00000452508 are not equivalent in the edb dataset (v101):108365325-108365508 and the gtf file (v102):108365325-108365505... PLEASE LOOK INTO THIS"
 [1] "ENST00000278616" "ATM"            
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 62 of gene's ATM transcript: ENST00000278616 are not equivalent in the edb dataset (v101):108365325-108365508 and the gtf file (v102):108365325-108365505... PLEASE LOOK INTO THIS"
 [1] "ENST00000288602" "BRAF"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 19 of gene's BRAF transcript: ENST00000288602 are not equivalent in the edb dataset (v101):140734597-140734770 and the gtf file (v102):140734600-140734770... PLEASE LOOK INTO THIS"
 [1] "ENST00000644969" "BRAF"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 20 of gene's BRAF transcript: ENST00000644969 are not equivalent in the edb dataset (v101):140726494-140726516 and the gtf file (v102):140726497-140726516... PLEASE LOOK INTO THIS"
 [1] "ENST00000646891" "BRAF"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 18 of gene's BRAF transcript: ENST00000646891 are not equivalent in the edb dataset (v101):140734597-140734770 and the gtf file (v102):140734600-140734770... PLEASE LOOK INTO THIS"
 [1] "ENST00000496384" "BRAF"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 19 of gene's BRAF transcript: ENST00000496384 are not equivalent in the edb dataset (v101):140726494-140726516 and the gtf file (v102):140726497-140726516... PLEASE LOOK INTO THIS"
 [1] "ENST00000357654" "BRCA1"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 22 of gene's BRCA1 transcript: ENST00000357654 are not equivalent in the edb dataset (v101):43045678-43045802 and the gtf file (v102):43045681-43045802... PLEASE LOOK INTO THIS"
 [1] "ENST00000471181" "BRCA1"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 23 of gene's BRCA1 transcript: ENST00000471181 are not equivalent in the edb dataset (v101):43045678-43045802 and the gtf file (v102):43045681-43045802... PLEASE LOOK INTO THIS"
 [1] "ENST00000352993" "BRCA1"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 21 of gene's BRCA1 transcript: ENST00000352993 are not equivalent in the edb dataset (v101):43045678-43045802 and the gtf file (v102):43045681-43045802... PLEASE LOOK INTO THIS"
 [1] "ENST00000461574" "BRCA1"          
 [1] "gene: BRCA1 with transcript: ENST00000461574 do not have any pfam information"
 [1] "ENST00000544455" "BRCA2"          
 Fetching CDS for 11 proteins ... 11 found
 Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "The start/stop coordinates of exon 26 of gene's BRCA2 transcript: ENST00000544455 are not equivalent in the edb dataset (v101):32398162-32398770 and the gtf file (v102):32398162-32398767... PLEASE LOOK INTO THIS"
 [1] "ENST00000380152" "BRCA2"          
 Fetching CDS for 11 proteins ... 11 found
 Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "The start/stop coordinates of exon 26 of gene's BRCA2 transcript: ENST00000380152 are not equivalent in the edb dataset (v101):32398162-32398770 and the gtf file (v102):32398162-32398767... PLEASE LOOK INTO THIS"
 [1] "ENST00000634840" "CBL"            
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "The start/stop coordinates of exon 15 of gene's CBL transcript: ENST00000634840 are not equivalent in the edb dataset (v101):119299495-119299781 and the gtf file (v102):119299495-119299778... PLEASE LOOK INTO THIS"
 [1] "ENST00000264033" "CBL"            
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "The start/stop coordinates of exon 16 of gene's CBL transcript: ENST00000264033 are not equivalent in the edb dataset (v101):119299495-119299781 and the gtf file (v102):119299495-119299778... PLEASE LOOK INTO THIS"
 [1] "ENST00000634586" "CBL"            
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 17 of gene's CBL transcript: ENST00000634586 are not equivalent in the edb dataset (v101):119306288-119306361 and the gtf file (v102):119306288-119306358... PLEASE LOOK INTO THIS"
+[1] "ENST00000361544" "CDC14A"         
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 15 of gene's CDC14A transcript: ENST00000361544 are not equivalent in the edb dataset (v101):100498929-100499379 and the gtf file (v102):100498929-100499376... PLEASE LOOK INTO THIS"
+[1] "ENST00000336454" "CDC14A"         
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 16 of gene's CDC14A transcript: ENST00000336454 are not equivalent in the edb dataset (v101):100518251-100518280 and the gtf file (v102):100518251-100518277... PLEASE LOOK INTO THIS"
+[1] "ENST00000635056" "CDC14A"         
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 13 of gene's CDC14A transcript: ENST00000635056 are not equivalent in the edb dataset (v101):100498929-100499379 and the gtf file (v102):100498929-100499376... PLEASE LOOK INTO THIS"
 [1] "ENST00000498124" "CDKN2A"         
 [1] "gene: CDKN2A with transcript: ENST00000498124 do not have any pfam information"
 [1] "ENST00000304494" "CDKN2A"         
@@ -106,350 +126,547 @@ Checking CDS and protein sequence lengths ... 4/4 OK
 [1] "ENST00000579755" "CDKN2A"         
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 2 of gene's CDKN2A transcript: ENST00000579755 are not equivalent in the edb dataset (v101):21971003-21971208 and the gtf file (v102):21971006-21971208... PLEASE LOOK INTO THIS"
 [1] "ENST00000382407" "CDY1B"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 1 of gene's CDY1B transcript: ENST00000382407 are not equivalent in the edb dataset (v101):24046066-24047688 and the gtf file (v102):24046069-24047688... PLEASE LOOK INTO THIS"
 [1] "ENST00000306882" "CDY1B"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 2 of gene's CDY1B transcript: ENST00000306882 are not equivalent in the edb dataset (v101):24045604-24045676 and the gtf file (v102):24045607-24045676... PLEASE LOOK INTO THIS"
 [1] "ENST00000361963" "CDY1"           
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 1 of gene's CDY1 transcript: ENST00000361963 are not equivalent in the edb dataset (v101):25622443-25624065 and the gtf file (v102):25622443-25624062... PLEASE LOOK INTO THIS"
 [1] "ENST00000306609" "CDY1"           
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 2 of gene's CDY1 transcript: ENST00000306609 are not equivalent in the edb dataset (v101):25624455-25624527 and the gtf file (v102):25624455-25624524... PLEASE LOOK INTO THIS"
 [1] "ENST00000349496" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000349496 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000645982" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000645982 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000646725" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000646725 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000645276" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000645276 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000450969" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000450969 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000645210" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000645210 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000405570" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000405570 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000643031" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000643031 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000642992" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000642992 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000642315" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000642315 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000646369" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000646369 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000647390" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000647390 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000644867" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000644867 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000643977" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000643977 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000433400" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000433400 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000645320" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000645320 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000643541" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000643541 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000396183" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000396183 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000642248" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000642248 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000643992" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000643992 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000643297" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000643297 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000396185" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000396185 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000644873" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000644873 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000431914" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000431914 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000642426" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000642426 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000441708" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 14 of gene's CTNNB1 transcript: ENST00000441708 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000453024" "CTNNB1"         
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 13 of gene's CTNNB1 transcript: ENST00000453024 are not equivalent in the edb dataset (v101):41239134-41239342 and the gtf file (v102):41239134-41239339... PLEASE LOOK INTO THIS"
 [1] "ENST00000405239" "DAZ1"           
 Fetching CDS for 12 proteins ... 12 found
 Checking CDS and protein sequence lengths ... 12/12 OK
+[1] "The start/stop coordinates of exon 27 of gene's DAZ1 transcript: ENST00000405239 are not equivalent in the edb dataset (v101):23135210-23135273 and the gtf file (v102):23135213-23135273... PLEASE LOOK INTO THIS"
 [1] "ENST00000382510" "DAZ1"           
 Fetching CDS for 7 proteins ... 7 found
 Checking CDS and protein sequence lengths ... 7/7 OK
+[1] "The start/stop coordinates of exon 21 of gene's DAZ1 transcript: ENST00000382510 are not equivalent in the edb dataset (v101):23130280-23130356 and the gtf file (v102):23130283-23130356... PLEASE LOOK INTO THIS"
 [1] "ENST00000382440" "DAZ2"           
 Fetching CDS for 20 proteins ... 20 found
 Checking CDS and protein sequence lengths ... 20/20 OK
+[1] "The start/stop coordinates of exon 27 of gene's DAZ2 transcript: ENST00000382440 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000382431" "DAZ2"           
 Fetching CDS for 13 proteins ... 13 found
 Checking CDS and protein sequence lengths ... 13/13 OK
+[1] "The start/stop coordinates of exon 20 of gene's DAZ2 transcript: ENST00000382431 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000382294" "DAZ2"           
 Fetching CDS for 8 proteins ... 8 found
 Checking CDS and protein sequence lengths ... 8/8 OK
+[1] "The start/stop coordinates of exon 15 of gene's DAZ2 transcript: ENST00000382294 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000400493" "DAZ2"           
 Fetching CDS for 11 proteins ... 11 found
 Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "The start/stop coordinates of exon 18 of gene's DAZ2 transcript: ENST00000400493 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000382306" "DAZ2"           
 Fetching CDS for 15 proteins ... 15 found
 Checking CDS and protein sequence lengths ... 15/15 OK
+[1] "The start/stop coordinates of exon 22 of gene's DAZ2 transcript: ENST00000382306 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000382449" "DAZ2"           
 Fetching CDS for 15 proteins ... 15 found
 Checking CDS and protein sequence lengths ... 15/15 OK
+[1] "The start/stop coordinates of exon 22 of gene's DAZ2 transcript: ENST00000382449 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000382424" "DAZ2"           
 Fetching CDS for 16 proteins ... 16 found
 Checking CDS and protein sequence lengths ... 16/16 OK
+[1] "The start/stop coordinates of exon 23 of gene's DAZ2 transcript: ENST00000382424 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000449947" "DAZ2"           
 Fetching CDS for 9 proteins ... 9 found
 Checking CDS and protein sequence lengths ... 9/9 OK
+[1] "The start/stop coordinates of exon 16 of gene's DAZ2 transcript: ENST00000449947 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000382433" "DAZ2"           
 Fetching CDS for 16 proteins ... 16 found
 Checking CDS and protein sequence lengths ... 16/16 OK
+[1] "The start/stop coordinates of exon 23 of gene's DAZ2 transcript: ENST00000382433 are not equivalent in the edb dataset (v101):23285438-23285501 and the gtf file (v102):23285438-23285498... PLEASE LOOK INTO THIS"
 [1] "ENST00000382365" "DAZ3"           
 Fetching CDS for 11 proteins ... 11 found
 Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "The start/stop coordinates of exon 18 of gene's DAZ3 transcript: ENST00000382365 are not equivalent in the edb dataset (v101):24768934-24768997 and the gtf file (v102):24768937-24768997... PLEASE LOOK INTO THIS"
 [1] "ENST00000446723" "DAZ3"           
 Fetching CDS for 9 proteins ... 9 found
 Checking CDS and protein sequence lengths ... 9/9 OK
+[1] "The start/stop coordinates of exon 16 of gene's DAZ3 transcript: ENST00000446723 are not equivalent in the edb dataset (v101):24768934-24768997 and the gtf file (v102):24768937-24768997... PLEASE LOOK INTO THIS"
 [1] "ENST00000315357" "DAZ3"           
 Fetching CDS for 8 proteins ... 8 found
 Checking CDS and protein sequence lengths ... 8/8 OK
+[1] "The start/stop coordinates of exon 15 of gene's DAZ3 transcript: ENST00000315357 are not equivalent in the edb dataset (v101):24768934-24768997 and the gtf file (v102):24768937-24768997... PLEASE LOOK INTO THIS"
 [1] "ENST00000382314" "DAZ4"           
 Fetching CDS for 12 proteins ... 12 found
 Checking CDS and protein sequence lengths ... 12/12 OK
+[1] "The start/stop coordinates of exon 23 of gene's DAZ4 transcript: ENST00000382314 are not equivalent in the edb dataset (v101):24901112-24901175 and the gtf file (v102):24901112-24901172... PLEASE LOOK INTO THIS"
 [1] "ENST00000634662" "DAZ4"           
 Fetching CDS for 11 proteins ... 11 found
 Checking CDS and protein sequence lengths ... 11/11 OK
+[1] "The start/stop coordinates of exon 22 of gene's DAZ4 transcript: ENST00000634662 are not equivalent in the edb dataset (v101):24901112-24901175 and the gtf file (v102):24901112-24901172... PLEASE LOOK INTO THIS"
 [1] "ENST00000382296" "DAZ4"           
 Fetching CDS for 14 proteins ... 14 found
 Checking CDS and protein sequence lengths ... 14/14 OK
+[1] "The start/stop coordinates of exon 25 of gene's DAZ4 transcript: ENST00000382296 are not equivalent in the edb dataset (v101):24901112-24901175 and the gtf file (v102):24901112-24901172... PLEASE LOOK INTO THIS"
 [1] "ENST00000399444" "DAZL"           
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 11 of gene's DAZL transcript: ENST00000399444 are not equivalent in the edb dataset (v101):16588660-16588713 and the gtf file (v102):16588663-16588713... PLEASE LOOK INTO THIS"
+[1] "ENST00000371126" "DCAF12L1"       
+[1] "gene: DCAF12L1 with transcript: ENST00000371126 do not have any pfam information"
 [1] "ENST00000336079" "DDX3Y"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 17 of gene's DDX3Y transcript: ENST00000336079 are not equivalent in the edb dataset (v101):12918043-12918122 and the gtf file (v102):12918043-12918119... PLEASE LOOK INTO THIS"
 [1] "ENST00000360160" "DDX3Y"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 17 of gene's DDX3Y transcript: ENST00000360160 are not equivalent in the edb dataset (v101):12918043-12918122 and the gtf file (v102):12918043-12918119... PLEASE LOOK INTO THIS"
 [1] "ENST00000527414" "DICER1"         
 Fetching CDS for 6 proteins ... 6 found
 Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "The start/stop coordinates of exon 26 of gene's DICER1 transcript: ENST00000527414 are not equivalent in the edb dataset (v101):95090498-95090663 and the gtf file (v102):95090501-95090663... PLEASE LOOK INTO THIS"
 [1] "ENST00000343455" "DICER1"         
 Fetching CDS for 6 proteins ... 6 found
 Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "The start/stop coordinates of exon 26 of gene's DICER1 transcript: ENST00000343455 are not equivalent in the edb dataset (v101):95090498-95090663 and the gtf file (v102):95090501-95090663... PLEASE LOOK INTO THIS"
 [1] "ENST00000393063" "DICER1"         
 Fetching CDS for 6 proteins ... 6 found
 Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "The start/stop coordinates of exon 26 of gene's DICER1 transcript: ENST00000393063 are not equivalent in the edb dataset (v101):95090498-95090663 and the gtf file (v102):95090501-95090663... PLEASE LOOK INTO THIS"
 [1] "ENST00000526495" "DICER1"         
 Fetching CDS for 6 proteins ... 6 found
 Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "The start/stop coordinates of exon 26 of gene's DICER1 transcript: ENST00000526495 are not equivalent in the edb dataset (v101):95090498-95090663 and the gtf file (v102):95090501-95090663... PLEASE LOOK INTO THIS"
 [1] "ENST00000532939" "DICER1"         
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "The start/stop coordinates of exon 22 of gene's DICER1 transcript: ENST00000532939 are not equivalent in the edb dataset (v101):95095772-95096713 and the gtf file (v102):95095775-95096713... PLEASE LOOK INTO THIS"
+[1] "ENST00000382276" "DMRT1"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 5 of gene's DMRT1 transcript: ENST00000382276 are not equivalent in the edb dataset (v101):967985-968139 and the gtf file (v102):967985-968136... PLEASE LOOK INTO THIS"
 [1] "ENST00000264709" "DNMT3A"         
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 22 of gene's DNMT3A transcript: ENST00000264709 are not equivalent in the edb dataset (v101):25234279-25234420 and the gtf file (v102):25234282-25234420... PLEASE LOOK INTO THIS"
 [1] "ENST00000321117" "DNMT3A"         
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 22 of gene's DNMT3A transcript: ENST00000321117 are not equivalent in the edb dataset (v101):25234279-25234420 and the gtf file (v102):25234282-25234420... PLEASE LOOK INTO THIS"
 [1] "ENST00000402667" "DNMT3A"         
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 17 of gene's DNMT3A transcript: ENST00000402667 are not equivalent in the edb dataset (v101):25234279-25234420 and the gtf file (v102):25234282-25234420... PLEASE LOOK INTO THIS"
 [1] "ENST00000380746" "DNMT3A"         
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 19 of gene's DNMT3A transcript: ENST00000380746 are not equivalent in the edb dataset (v101):25234279-25234420 and the gtf file (v102):25234282-25234420... PLEASE LOOK INTO THIS"
 [1] "ENST00000300853" "ERCC1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 9 of gene's ERCC1 transcript: ENST00000300853 are not equivalent in the edb dataset (v101):45409675-45409725 and the gtf file (v102):45409678-45409725... PLEASE LOOK INTO THIS"
 [1] "ENST00000589165" "ERCC1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 9 of gene's ERCC1 transcript: ENST00000589165 are not equivalent in the edb dataset (v101):45409675-45409725 and the gtf file (v102):45409678-45409725... PLEASE LOOK INTO THIS"
 [1] "ENST00000013807" "ERCC1"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 8 of gene's ERCC1 transcript: ENST00000013807 are not equivalent in the edb dataset (v101):45413548-45413745 and the gtf file (v102):45413551-45413745... PLEASE LOOK INTO THIS"
 [1] "ENST00000340192" "ERCC1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 8 of gene's ERCC1 transcript: ENST00000340192 are not equivalent in the edb dataset (v101):45409675-45409725 and the gtf file (v102):45409678-45409725... PLEASE LOOK INTO THIS"
 [1] "ENST00000423698" "ERCC1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 8 of gene's ERCC1 transcript: ENST00000423698 are not equivalent in the edb dataset (v101):45409675-45409725 and the gtf file (v102):45409678-45409725... PLEASE LOOK INTO THIS"
 [1] "ENST00000206249" "ESR1"           
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 8 of gene's ESR1 transcript: ENST00000206249 are not equivalent in the edb dataset (v101):152098732-152098966 and the gtf file (v102):152098732-152098963... PLEASE LOOK INTO THIS"
 [1] "ENST00000338799" "ESR1"           
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 8 of gene's ESR1 transcript: ENST00000338799 are not equivalent in the edb dataset (v101):152098732-152098966 and the gtf file (v102):152098732-152098963... PLEASE LOOK INTO THIS"
 [1] "ENST00000440973" "ESR1"           
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 8 of gene's ESR1 transcript: ENST00000440973 are not equivalent in the edb dataset (v101):152098732-152098966 and the gtf file (v102):152098732-152098963... PLEASE LOOK INTO THIS"
 [1] "ENST00000443427" "ESR1"           
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 8 of gene's ESR1 transcript: ENST00000443427 are not equivalent in the edb dataset (v101):152098732-152098966 and the gtf file (v102):152098732-152098963... PLEASE LOOK INTO THIS"
 [1] "ENST00000267430" "FANCM"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 23 of gene's FANCM transcript: ENST00000267430 are not equivalent in the edb dataset (v101):45199870-45200008 and the gtf file (v102):45199870-45200005... PLEASE LOOK INTO THIS"
 [1] "ENST00000554809" "FANCM"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000450632 and its transcript: ENST00000554809 at row: 1"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000450632 and its transcript: ENST00000554809 at row: 2"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000450632 and its transcript: ENST00000554809 at row: 1... including entire cds for this transcript"
+Null data.table (0 rows and 0 cols)
+    chr    start     stop   transcript_id gene_name         gene_id
+ 1:  14 45175958 45176976 ENST00000554809     FANCM ENSG00000187790
+ 2:  14 45181430 45181524 ENST00000554809     FANCM ENSG00000187790
+ 3:  14 45181637 45181705 ENST00000554809     FANCM ENSG00000187790
+ 4:  14 45183774 45183902 ENST00000554809     FANCM ENSG00000187790
+ 5:  14 45185217 45185373 ENST00000554809     FANCM ENSG00000187790
+ 6:  14 45187781 45187887 ENST00000554809     FANCM ENSG00000187790
+ 7:  14 45188802 45189362 ENST00000554809     FANCM ENSG00000187790
+ 8:  14 45195481 45195585 ENST00000554809     FANCM ENSG00000187790
+ 9:  14 45196172 45196547 ENST00000554809     FANCM ENSG00000187790
+10:  14 45198644 45198935 ENST00000554809     FANCM ENSG00000187790
+11:  14 45199870 45200005 ENST00000554809     FANCM ENSG00000187790
+         protein_id transcript_biotype gtf exon_length total_exon_length
+ 1: ENSP00000450632     protein_coding   1        1019              3046
+ 2: ENSP00000450632     protein_coding   1          95              3046
+ 3: ENSP00000450632     protein_coding   1          69              3046
+ 4: ENSP00000450632     protein_coding   1         129              3046
+ 5: ENSP00000450632     protein_coding   1         157              3046
+ 6: ENSP00000450632     protein_coding   1         107              3046
+ 7: ENSP00000450632     protein_coding   1         561              3046
+ 8: ENSP00000450632     protein_coding   1         105              3046
+ 9: ENSP00000450632     protein_coding   1         376              3046
+10: ENSP00000450632     protein_coding   1         292              3046
+11: ENSP00000450632     protein_coding   1         136              3046
+    exon_num          CCDS status avg_GTEx_TPM appris GTEx pfam_exons pfam_id
+ 1:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 2:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 3:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 4:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 5:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 6:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 7:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 8:       11 not_in_appris  minor         4.04      0    1          0      NA
+ 9:       11 not_in_appris  minor         4.04      0    1          0      NA
+10:       11 not_in_appris  minor         4.04      0    1          0      NA
+11:       11 not_in_appris  minor         4.04      0    1          0      NA
 [1] "ENST00000351936" "FGFR2"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 18 of gene's FGFR2 transcript: ENST00000351936 are not equivalent in the edb dataset (v101):121479857-121480021 and the gtf file (v102):121479860-121480021... PLEASE LOOK INTO THIS"
 [1] "ENST00000346997" "FGFR2"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 17 of gene's FGFR2 transcript: ENST00000346997 are not equivalent in the edb dataset (v101):121479857-121480021 and the gtf file (v102):121479860-121480021... PLEASE LOOK INTO THIS"
 [1] "ENST00000358487" "FGFR2"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 17 of gene's FGFR2 transcript: ENST00000358487 are not equivalent in the edb dataset (v101):121479857-121480021 and the gtf file (v102):121479860-121480021... PLEASE LOOK INTO THIS"
 [1] "ENST00000457416" "FGFR2"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 17 of gene's FGFR2 transcript: ENST00000457416 are not equivalent in the edb dataset (v101):121479857-121480021 and the gtf file (v102):121479860-121480021... PLEASE LOOK INTO THIS"
 [1] "ENST00000369061" "FGFR2"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 15 of gene's FGFR2 transcript: ENST00000369061 are not equivalent in the edb dataset (v101):121479857-121480021 and the gtf file (v102):121479860-121480021... PLEASE LOOK INTO THIS"
 [1] "ENST00000613048" "FGFR2"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 16 of gene's FGFR2 transcript: ENST00000613048 are not equivalent in the edb dataset (v101):121479857-121480021 and the gtf file (v102):121479860-121480021... PLEASE LOOK INTO THIS"
 [1] "ENST00000613324" "FGFR2"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000481464 and its transcript: ENST00000613324 at row: 1"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000481464 and its transcript: ENST00000613324 at row: 1... including entire cds for this transcript"
+Null data.table (0 rows and 0 cols)
+   chr     start      stop   transcript_id gene_name         gene_id
+1:  10 121593709 121593764 ENST00000613324     FGFR2 ENSG00000066468
+2:  10 121565438 121565704 ENST00000613324     FGFR2 ENSG00000066468
+3:  10 121564497 121564579 ENST00000613324     FGFR2 ENSG00000066468
+        protein_id transcript_biotype gtf exon_length total_exon_length
+1: ENSP00000481464     protein_coding   1          56               406
+2: ENSP00000481464     protein_coding   1         267               406
+3: ENSP00000481464     protein_coding   1          83               406
+   exon_num          CCDS status avg_GTEx_TPM appris GTEx pfam_exons pfam_id
+1:        3 not_in_appris  minor          1.6      0    1          0      NA
+2:        3 not_in_appris  minor          1.6      0    1          0      NA
+3:        3 not_in_appris  minor          1.6      0    1          0      NA
 [1] "ENST00000638709" "FGFR2"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000491912 and its transcript: ENST00000638709 at row: 1"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000491912 and its transcript: ENST00000638709 at row: 2"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000491912 and its transcript: ENST00000638709 at row: 1... including entire cds for this transcript"
+Null data.table (0 rows and 0 cols)
+   chr     start      stop   transcript_id gene_name         gene_id
+1:  10 121485395 121485484 ENST00000638709     FGFR2 ENSG00000066468
+2:  10 121483698 121483803 ENST00000638709     FGFR2 ENSG00000066468
+3:  10 121480054 121480113 ENST00000638709     FGFR2 ENSG00000066468
+        protein_id transcript_biotype gtf exon_length total_exon_length
+1: ENSP00000491912     protein_coding   1          90               256
+2: ENSP00000491912     protein_coding   1         106               256
+3: ENSP00000491912     protein_coding   1          60               256
+   exon_num          CCDS status avg_GTEx_TPM appris GTEx pfam_exons pfam_id
+1:        3 not_in_appris  minor         1.09      0    1          0      NA
+2:        3 not_in_appris  minor         1.09      0    1          0      NA
+3:        3 not_in_appris  minor         1.09      0    1          0      NA
 [1] "ENST00000412135" "FGFR3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 17 of gene's FGFR3 transcript: ENST00000412135 are not equivalent in the edb dataset (v101):1807116-1807262 and the gtf file (v102):1807116-1807259... PLEASE LOOK INTO THIS"
 [1] "ENST00000440486" "FGFR3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 17 of gene's FGFR3 transcript: ENST00000440486 are not equivalent in the edb dataset (v101):1807116-1807262 and the gtf file (v102):1807116-1807259... PLEASE LOOK INTO THIS"
 [1] "ENST00000352904" "FGFR3"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 15 of gene's FGFR3 transcript: ENST00000352904 are not equivalent in the edb dataset (v101):1807116-1807262 and the gtf file (v102):1807116-1807259... PLEASE LOOK INTO THIS"
 [1] "ENST00000481110" "FGFR3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 16 of gene's FGFR3 transcript: ENST00000481110 are not equivalent in the edb dataset (v101):1807116-1807288 and the gtf file (v102):1807116-1807285... PLEASE LOOK INTO THIS"
 [1] "ENST00000661429" "H3-3A"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3A transcript: ENST00000661429 are not equivalent in the edb dataset (v101):226071351-226071479 and the gtf file (v102):226071351-226071476... PLEASE LOOK INTO THIS"
 [1] "ENST00000366815" "H3-3A"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3A transcript: ENST00000366815 are not equivalent in the edb dataset (v101):226071351-226071479 and the gtf file (v102):226071351-226071476... PLEASE LOOK INTO THIS"
 [1] "ENST00000366816" "H3-3A"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3A transcript: ENST00000366816 are not equivalent in the edb dataset (v101):226071351-226071479 and the gtf file (v102):226071351-226071476... PLEASE LOOK INTO THIS"
 [1] "ENST00000655399" "H3-3A"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3A transcript: ENST00000655399 are not equivalent in the edb dataset (v101):226071351-226071479 and the gtf file (v102):226071351-226071476... PLEASE LOOK INTO THIS"
 [1] "ENST00000366813" "H3-3A"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3A transcript: ENST00000366813 are not equivalent in the edb dataset (v101):226071351-226071479 and the gtf file (v102):226071351-226071476... PLEASE LOOK INTO THIS"
 [1] "ENST00000666609" "H3-3A"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3A transcript: ENST00000666609 are not equivalent in the edb dataset (v101):226071351-226071479 and the gtf file (v102):226071351-226071476... PLEASE LOOK INTO THIS"
 [1] "ENST00000366814" "H3-3A"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 2 of gene's H3-3A transcript: ENST00000366814 are not equivalent in the edb dataset (v101):226065656-226065899 and the gtf file (v102):226065656-226065896... PLEASE LOOK INTO THIS"
 [1] "ENST00000589599" "H3-3B"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3B transcript: ENST00000589599 are not equivalent in the edb dataset (v101):75778595-75778723 and the gtf file (v102):75778598-75778723... PLEASE LOOK INTO THIS"
 [1] "ENST00000587560" "H3-3B"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3B transcript: ENST00000587560 are not equivalent in the edb dataset (v101):75778595-75778723 and the gtf file (v102):75778598-75778723... PLEASE LOOK INTO THIS"
 [1] "ENST00000586607" "H3-3B"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3B transcript: ENST00000586607 are not equivalent in the edb dataset (v101):75778595-75778723 and the gtf file (v102):75778598-75778723... PLEASE LOOK INTO THIS"
 [1] "ENST00000254810" "H3-3B"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3B transcript: ENST00000254810 are not equivalent in the edb dataset (v101):75778595-75778723 and the gtf file (v102):75778598-75778723... PLEASE LOOK INTO THIS"
 [1] "ENST00000586270" "H3-3B"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000465403 and its transcript: ENST00000586270 at row: 1"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000465403 and its transcript: ENST00000586270 at row: 2"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000465403 and its transcript: ENST00000586270 at row: 3"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000465403 and its transcript: ENST00000586270 at row: 1... including entire cds for this transcript"
+Null data.table (0 rows and 0 cols)
+   chr    start     stop   transcript_id gene_name         gene_id
+1:  17 75779047 75779174 ENST00000586270     H3-3B ENSG00000132475
+2:  17 75778810 75778963 ENST00000586270     H3-3B ENSG00000132475
+3:  17 75778610 75778723 ENST00000586270     H3-3B ENSG00000132475
+        protein_id transcript_biotype gtf exon_length total_exon_length
+1: ENSP00000465403     protein_coding   1         128               396
+2: ENSP00000465403     protein_coding   1         154               396
+3: ENSP00000465403     protein_coding   1         114               396
+   exon_num          CCDS status avg_GTEx_TPM appris GTEx pfam_exons pfam_id
+1:        3 not_in_appris  minor        73.59      0    1          0      NA
+2:        3 not_in_appris  minor        73.59      0    1          0      NA
+3:        3 not_in_appris  minor        73.59      0    1          0      NA
 [1] "ENST00000591890" "H3-3B"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3B transcript: ENST00000591890 are not equivalent in the edb dataset (v101):75778716-75778723 and the gtf file (v102):75778719-75778723... PLEASE LOOK INTO THIS"
 [1] "ENST00000592643" "H3-3B"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 3 of gene's H3-3B transcript: ENST00000592643 are not equivalent in the edb dataset (v101):75778591-75778723 and the gtf file (v102):75778594-75778723... PLEASE LOOK INTO THIS"
 [1] "ENST00000451590" "HRAS"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 4 of gene's HRAS transcript: ENST00000451590 are not equivalent in the edb dataset (v101):532636-532755 and the gtf file (v102):532639-532755... PLEASE LOOK INTO THIS"
 [1] "ENST00000311189" "HRAS"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 4 of gene's HRAS transcript: ENST00000311189 are not equivalent in the edb dataset (v101):532636-532755 and the gtf file (v102):532639-532755... PLEASE LOOK INTO THIS"
 [1] "ENST00000397596" "HRAS"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 4 of gene's HRAS transcript: ENST00000397596 are not equivalent in the edb dataset (v101):532636-532755 and the gtf file (v102):532639-532755... PLEASE LOOK INTO THIS"
 [1] "ENST00000397594" "HRAS"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 4 of gene's HRAS transcript: ENST00000397594 are not equivalent in the edb dataset (v101):533296-533358 and the gtf file (v102):533299-533358... PLEASE LOOK INTO THIS"
 [1] "ENST00000412167" "KIT"            
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 21 of gene's KIT transcript: ENST00000412167 are not equivalent in the edb dataset (v101):54738429-54738557 and the gtf file (v102):54738429-54738554... PLEASE LOOK INTO THIS"
 [1] "ENST00000288135" "KIT"            
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 21 of gene's KIT transcript: ENST00000288135 are not equivalent in the edb dataset (v101):54738429-54738557 and the gtf file (v102):54738429-54738554... PLEASE LOOK INTO THIS"
+[1] "ENST00000293303" "KLHL10"         
+Fetching CDS for 8 proteins ... 8 found
+Checking CDS and protein sequence lengths ... 8/8 OK
+[1] "The start/stop coordinates of exon 5 of gene's KLHL10 transcript: ENST00000293303 are not equivalent in the edb dataset (v101):41847933-41848307 and the gtf file (v102):41847933-41848304... PLEASE LOOK INTO THIS"
 [1] "ENST00000311936" "KRAS"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 4 of gene's KRAS transcript: ENST00000311936 are not equivalent in the edb dataset (v101):25209795-25209911 and the gtf file (v102):25209798-25209911... PLEASE LOOK INTO THIS"
 [1] "ENST00000256078" "KRAS"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 4 of gene's KRAS transcript: ENST00000256078 are not equivalent in the edb dataset (v101):25215441-25215560 and the gtf file (v102):25215444-25215560... PLEASE LOOK INTO THIS"
 [1] "ENST00000611712" "LIG4"           
 Fetching CDS for 6 proteins ... 6 found
 Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "The start/stop coordinates of exon 1 of gene's LIG4 transcript: ENST00000611712 are not equivalent in the edb dataset (v101):108208533-108211268 and the gtf file (v102):108208536-108211268... PLEASE LOOK INTO THIS"
 [1] "ENST00000405925" "LIG4"           
 Fetching CDS for 6 proteins ... 6 found
 Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "The start/stop coordinates of exon 1 of gene's LIG4 transcript: ENST00000405925 are not equivalent in the edb dataset (v101):108208533-108211268 and the gtf file (v102):108208536-108211268... PLEASE LOOK INTO THIS"
 [1] "ENST00000442234" "LIG4"           
 Fetching CDS for 6 proteins ... 6 found
 Checking CDS and protein sequence lengths ... 6/6 OK
+[1] "The start/stop coordinates of exon 1 of gene's LIG4 transcript: ENST00000442234 are not equivalent in the edb dataset (v101):108208533-108211268 and the gtf file (v102):108208536-108211268... PLEASE LOOK INTO THIS"
+[1] "ENST00000290536" "M1AP"           
+[1] "gene: M1AP with transcript: ENST00000290536 do not have any pfam information"
+[1] "ENST00000409585" "M1AP"           
+[1] "gene: M1AP with transcript: ENST00000409585 do not have any pfam information"
+[1] "ENST00000536235" "M1AP"           
+[1] "gene: M1AP with transcript: ENST00000536235 do not have any pfam information"
 [1] "ENST00000307102" "MAP2K1"         
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 11 of gene's MAP2K1 transcript: ENST00000307102 are not equivalent in the edb dataset (v101):66490502-66490615 and the gtf file (v102):66490502-66490612... PLEASE LOOK INTO THIS"
 [1] "ENST00000566326" "MAP2K1"         
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 7 of gene's MAP2K1 transcript: ENST00000566326 are not equivalent in the edb dataset (v101):66490502-66490615 and the gtf file (v102):66490502-66490612... PLEASE LOOK INTO THIS"
 [1] "ENST00000262948" "MAP2K2"         
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 11 of gene's MAP2K2 transcript: ENST00000262948 are not equivalent in the edb dataset (v101):4090598-4090708 and the gtf file (v102):4090601-4090708... PLEASE LOOK INTO THIS"
 [1] "ENST00000394867" "MAP2K2"         
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 10 of gene's MAP2K2 transcript: ENST00000394867 are not equivalent in the edb dataset (v101):4090598-4090708 and the gtf file (v102):4090601-4090708... PLEASE LOOK INTO THIS"
 [1] "ENST00000401548" "MEI1"           
 [1] "gene: MEI1 with transcript: ENST00000401548 do not have any pfam information"
 [1] "ENST00000423900" "MEI1"           
@@ -457,206 +674,388 @@ Checking CDS and protein sequence lengths ... 1/1 OK
 [1] "ENST00000231790" "MLH1"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 19 of gene's MLH1 transcript: ENST00000231790 are not equivalent in the edb dataset (v101):37050486-37050653 and the gtf file (v102):37050486-37050650... PLEASE LOOK INTO THIS"
 [1] "ENST00000355774" "MLH3"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 12 of gene's MLH3 transcript: ENST00000355774 are not equivalent in the edb dataset (v101):75017082-75017201 and the gtf file (v102):75017085-75017201... PLEASE LOOK INTO THIS"
 [1] "ENST00000380968" "MLH3"           
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 11 of gene's MLH3 transcript: ENST00000380968 are not equivalent in the edb dataset (v101):75017082-75017201 and the gtf file (v102):75017085-75017201... PLEASE LOOK INTO THIS"
 [1] "ENST00000553713" "MLH3"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 1"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 2"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 3"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 4"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 5"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 6"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000451130 and its transcript: ENST00000553713 at row: 1... including entire cds for this transcript"
+Null data.table (0 rows and 0 cols)
+    chr    start     stop   transcript_id gene_name         gene_id
+ 1:  14 75046376 75046825 ENST00000553713      MLH3 ENSG00000119684
+ 2:  14 75041615 75041700 ENST00000553713      MLH3 ENSG00000119684
+ 3:  14 75039911 75040015 ENST00000553713      MLH3 ENSG00000119684
+ 4:  14 75038340 75038412 ENST00000553713      MLH3 ENSG00000119684
+ 5:  14 75033419 75033490 ENST00000553713      MLH3 ENSG00000119684
+ 6:  14 75032068 75032179 ENST00000553713      MLH3 ENSG00000119684
+ 7:  14 75030543 75030702 ENST00000553713      MLH3 ENSG00000119684
+ 8:  14 75022995 75023018 ENST00000553713      MLH3 ENSG00000119684
+ 9:  14 75022814 75022892 ENST00000553713      MLH3 ENSG00000119684
+10:  14 75018829 75018980 ENST00000553713      MLH3 ENSG00000119684
+11:  14 75017085 75017201 ENST00000553713      MLH3 ENSG00000119684
+         protein_id transcript_biotype gtf exon_length total_exon_length
+ 1: ENSP00000451130     protein_coding   1         450              1430
+ 2: ENSP00000451130     protein_coding   1          86              1430
+ 3: ENSP00000451130     protein_coding   1         105              1430
+ 4: ENSP00000451130     protein_coding   1          73              1430
+ 5: ENSP00000451130     protein_coding   1          72              1430
+ 6: ENSP00000451130     protein_coding   1         112              1430
+ 7: ENSP00000451130     protein_coding   1         160              1430
+ 8: ENSP00000451130     protein_coding   1          24              1430
+ 9: ENSP00000451130     protein_coding   1          79              1430
+10: ENSP00000451130     protein_coding   1         152              1430
+11: ENSP00000451130     protein_coding   1         117              1430
+    exon_num          CCDS status avg_GTEx_TPM appris GTEx pfam_exons pfam_id
+ 1:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 2:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 3:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 4:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 5:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 6:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 7:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 8:       11 not_in_appris  minor         1.33      0    1          0      NA
+ 9:       11 not_in_appris  minor         1.33      0    1          0      NA
+10:       11 not_in_appris  minor         1.33      0    1          0      NA
+11:       11 not_in_appris  minor         1.33      0    1          0      NA
 [1] "ENST00000375703" "MSH5"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 24 of gene's MSH5 transcript: ENST00000375703 are not equivalent in the edb dataset (v101):31762420-31762531 and the gtf file (v102):31762420-31762528... PLEASE LOOK INTO THIS"
 [1] "ENST00000375755" "MSH5"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 24 of gene's MSH5 transcript: ENST00000375755 are not equivalent in the edb dataset (v101):31762420-31762531 and the gtf file (v102):31762420-31762528... PLEASE LOOK INTO THIS"
 [1] "ENST00000375750" "MSH5"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 24 of gene's MSH5 transcript: ENST00000375750 are not equivalent in the edb dataset (v101):31762420-31762531 and the gtf file (v102):31762420-31762528... PLEASE LOOK INTO THIS"
 [1] "ENST00000425703" "MSH5"           
 [1] "gene: MSH5 with transcript: ENST00000425703 do not have any pfam information"
 [1] "ENST00000429846" "MSH5"           
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 5 of gene's MSH5 transcript: ENST00000429846 are not equivalent in the edb dataset (v101):31762420-31762531 and the gtf file (v102):31762420-31762528... PLEASE LOOK INTO THIS"
 [1] "ENST00000358273" "NF1"            
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 58 of gene's NF1 transcript: ENST00000358273 are not equivalent in the edb dataset (v101):31374013-31374155 and the gtf file (v102):31374013-31374152... PLEASE LOOK INTO THIS"
 [1] "ENST00000356175" "NF1"            
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 57 of gene's NF1 transcript: ENST00000356175 are not equivalent in the edb dataset (v101):31374013-31374155 and the gtf file (v102):31374013-31374152... PLEASE LOOK INTO THIS"
 [1] "ENST00000373588" "NR5A1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 6 of gene's NR5A1 transcript: ENST00000373588 are not equivalent in the edb dataset (v101):124482758-124483005 and the gtf file (v102):124482761-124483005... PLEASE LOOK INTO THIS"
+[1] "ENST00000423118" "PKD1"           
+Fetching CDS for 21 proteins ... 21 found
+Checking CDS and protein sequence lengths ... 21/21 OK
+[1] "The start/stop coordinates of exon 46 of gene's PKD1 transcript: ENST00000423118 are not equivalent in the edb dataset (v101):2089727-2090194 and the gtf file (v102):2089730-2090194... PLEASE LOOK INTO THIS"
+[1] "ENST00000262304" "PKD1"           
+Fetching CDS for 21 proteins ... 21 found
+Checking CDS and protein sequence lengths ... 21/21 OK
+[1] "The start/stop coordinates of exon 46 of gene's PKD1 transcript: ENST00000262304 are not equivalent in the edb dataset (v101):2089727-2090194 and the gtf file (v102):2089730-2090194... PLEASE LOOK INTO THIS"
 [1] "ENST00000265849" "PMS2"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 15 of gene's PMS2 transcript: ENST00000265849 are not equivalent in the edb dataset (v101):5973399-5973542 and the gtf file (v102):5973402-5973542... PLEASE LOOK INTO THIS"
+[1] "ENST00000392167" "PNLDC1"         
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 19 of gene's PNLDC1 transcript: ENST00000392167 are not equivalent in the edb dataset (v101):159820454-159820517 and the gtf file (v102):159820454-159820514... PLEASE LOOK INTO THIS"
 [1] "ENST00000305921" "PPM1D"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 6 of gene's PPM1D transcript: ENST00000305921 are not equivalent in the edb dataset (v101):60662995-60663552 and the gtf file (v102):60662995-60663549... PLEASE LOOK INTO THIS"
 [1] "ENST00000308677" "PRKACA"         
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 10 of gene's PRKACA transcript: ENST00000308677 are not equivalent in the edb dataset (v101):14093112-14093237 and the gtf file (v102):14093115-14093237... PLEASE LOOK INTO THIS"
 [1] "ENST00000303728" "PRY"            
 [1] "gene: PRY with transcript: ENST00000303728 do not have any pfam information"
 [1] "ENST00000429896" "PTCH1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 21 of gene's PTCH1 transcript: ENST00000429896 are not equivalent in the edb dataset (v101):95446912-95447451 and the gtf file (v102):95446915-95447451... PLEASE LOOK INTO THIS"
 [1] "ENST00000437951" "PTCH1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 23 of gene's PTCH1 transcript: ENST00000437951 are not equivalent in the edb dataset (v101):95446912-95447451 and the gtf file (v102):95446915-95447451... PLEASE LOOK INTO THIS"
 [1] "ENST00000421141" "PTCH1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 21 of gene's PTCH1 transcript: ENST00000421141 are not equivalent in the edb dataset (v101):95446912-95447451 and the gtf file (v102):95446915-95447451... PLEASE LOOK INTO THIS"
 [1] "ENST00000375274" "PTCH1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 23 of gene's PTCH1 transcript: ENST00000375274 are not equivalent in the edb dataset (v101):95446912-95447451 and the gtf file (v102):95446915-95447451... PLEASE LOOK INTO THIS"
 [1] "ENST00000430669" "PTCH1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 23 of gene's PTCH1 transcript: ENST00000430669 are not equivalent in the edb dataset (v101):95446912-95447451 and the gtf file (v102):95446915-95447451... PLEASE LOOK INTO THIS"
 [1] "ENST00000331920" "PTCH1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 23 of gene's PTCH1 transcript: ENST00000331920 are not equivalent in the edb dataset (v101):95446912-95447451 and the gtf file (v102):95446915-95447451... PLEASE LOOK INTO THIS"
 [1] "ENST00000418258" "PTCH1"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 21 of gene's PTCH1 transcript: ENST00000418258 are not equivalent in the edb dataset (v101):95446912-95447451 and the gtf file (v102):95446915-95447451... PLEASE LOOK INTO THIS"
 [1] "ENST00000551630" "PTCH1"          
 [1] "gene: PTCH1 with transcript: ENST00000551630 do not have any pfam information"
 [1] "ENST00000635625" "PTPN11"         
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 15 of gene's PTPN11 transcript: ENST00000635625 are not equivalent in the edb dataset (v101):112504695-112504764 and the gtf file (v102):112504695-112504761... PLEASE LOOK INTO THIS"
 [1] "ENST00000351677" "PTPN11"         
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 15 of gene's PTPN11 transcript: ENST00000351677 are not equivalent in the edb dataset (v101):112504695-112504764 and the gtf file (v102):112504695-112504761... PLEASE LOOK INTO THIS"
 [1] "ENST00000251849" "RAF1"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 16 of gene's RAF1 transcript: ENST00000251849 are not equivalent in the edb dataset (v101):12584514-12584657 and the gtf file (v102):12584517-12584657... PLEASE LOOK INTO THIS"
 [1] "ENST00000442415" "RAF1"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 17 of gene's RAF1 transcript: ENST00000442415 are not equivalent in the edb dataset (v101):12584514-12584657 and the gtf file (v102):12584517-12584657... PLEASE LOOK INTO THIS"
 [1] "ENST00000299440" "RAG1"           
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 1 of gene's RAG1 transcript: ENST00000299440 are not equivalent in the edb dataset (v101):36573305-36576436 and the gtf file (v102):36573305-36576433... PLEASE LOOK INTO THIS"
 [1] "ENST00000267163" "RB1"            
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 27 of gene's RB1 transcript: ENST00000267163 are not equivalent in the edb dataset (v101):48479998-48480071 and the gtf file (v102):48479998-48480068... PLEASE LOOK INTO THIS"
 [1] "ENST00000347869" "RBM5"           
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 24 of gene's RBM5 transcript: ENST00000347869 are not equivalent in the edb dataset (v101):50118331-50118456 and the gtf file (v102):50118331-50118453... PLEASE LOOK INTO THIS"
 [1] "ENST00000355710" "RET"            
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "The start/stop coordinates of exon 20 of gene's RET transcript: ENST00000355710 are not equivalent in the edb dataset (v101):43128112-43128269 and the gtf file (v102):43128112-43128266... PLEASE LOOK INTO THIS"
 [1] "ENST00000638465" "RET"            
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000491505 and its transcript: ENST00000638465 at row: 1"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000491505 and its transcript: ENST00000638465 at row: 2"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000491505 and its transcript: ENST00000638465 at row: 1... including entire cds for this transcript"
+Null data.table (0 rows and 0 cols)
+   chr    start     stop   transcript_id gene_name         gene_id
+1:  10 43100484 43100722 ENST00000638465       RET ENSG00000165731
+2:  10 43102302 43102402 ENST00000638465       RET ENSG00000165731
+        protein_id transcript_biotype gtf exon_length total_exon_length
+1: ENSP00000491505     protein_coding   1         239               340
+2: ENSP00000491505     protein_coding   1         101               340
+   exon_num          CCDS status avg_GTEx_TPM appris GTEx pfam_exons pfam_id
+1:        2 not_in_appris  minor         1.17      0    1          0      NA
+2:        2 not_in_appris  minor         1.17      0    1          0      NA
 [1] "ENST00000342988" "SMAD4"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 11 of gene's SMAD4 transcript: ENST00000342988 are not equivalent in the edb dataset (v101):51078256-51078467 and the gtf file (v102):51078256-51078464... PLEASE LOOK INTO THIS"
 [1] "ENST00000398417" "SMAD4"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 11 of gene's SMAD4 transcript: ENST00000398417 are not equivalent in the edb dataset (v101):51078256-51078467 and the gtf file (v102):51078256-51078464... PLEASE LOOK INTO THIS"
 [1] "ENST00000395038" "SOS1"           
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "The start/stop coordinates of exon 22 of gene's SOS1 transcript: ENST00000395038 are not equivalent in the edb dataset (v101):38985824-38986315 and the gtf file (v102):38985827-38986315... PLEASE LOOK INTO THIS"
+[1] "ENST00000615138" "STAG3"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 33 of gene's STAG3 transcript: ENST00000615138 are not equivalent in the edb dataset (v101):100214007-100214015 and the gtf file (v102):100214007-100214012... PLEASE LOOK INTO THIS"
+[1] "ENST00000426455" "STAG3"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 33 of gene's STAG3 transcript: ENST00000426455 are not equivalent in the edb dataset (v101):100214007-100214015 and the gtf file (v102):100214007-100214012... PLEASE LOOK INTO THIS"
+[1] "ENST00000317296" "STAG3"          
+Fetching CDS for 1 proteins ... 1 found
+Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 33 of gene's STAG3 transcript: ENST00000317296 are not equivalent in the edb dataset (v101):100214007-100214015 and the gtf file (v102):100214007-100214012... PLEASE LOOK INTO THIS"
+[1] "ENST00000412190" "STAG3"          
+[1] "gene: STAG3 with transcript: ENST00000412190 do not have any pfam information"
+[1] "ENST00000416412" "STAG3"          
+[1] "gene: STAG3 with transcript: ENST00000416412 do not have any pfam information"
+[1] "ENST00000422690" "STAG3"          
+[1] "gene: STAG3 with transcript: ENST00000422690 do not have any pfam information"
 [1] "ENST00000404395" "STAT3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 23 of gene's STAT3 transcript: ENST00000404395 are not equivalent in the edb dataset (v101):42315745-42315800 and the gtf file (v102):42315748-42315800... PLEASE LOOK INTO THIS"
 [1] "ENST00000588969" "STAT3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 23 of gene's STAT3 transcript: ENST00000588969 are not equivalent in the edb dataset (v101):42315745-42315800 and the gtf file (v102):42315748-42315800... PLEASE LOOK INTO THIS"
 [1] "ENST00000264657" "STAT3"          
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 23 of gene's STAT3 transcript: ENST00000264657 are not equivalent in the edb dataset (v101):42315745-42315800 and the gtf file (v102):42315748-42315800... PLEASE LOOK INTO THIS"
 [1] "ENST00000326873" "STK11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 9 of gene's STK11 transcript: ENST00000326873 are not equivalent in the edb dataset (v101):1226454-1226647 and the gtf file (v102):1226454-1226644... PLEASE LOOK INTO THIS"
 [1] "ENST00000652231" "STK11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 9 of gene's STK11 transcript: ENST00000652231 are not equivalent in the edb dataset (v101):1223638-1223744 and the gtf file (v102):1223638-1223741... PLEASE LOOK INTO THIS"
 [1] "ENST00000586243" "STK11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 11 of gene's STK11 transcript: ENST00000586243 are not equivalent in the edb dataset (v101):1226603-1226647 and the gtf file (v102):1226603-1226644... PLEASE LOOK INTO THIS"
+[1] "ENST00000357552" "SYCP2"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 43 of gene's SYCP2 transcript: ENST00000357552 are not equivalent in the edb dataset (v101):59864311-59864388 and the gtf file (v102):59864314-59864388... PLEASE LOOK INTO THIS"
+[1] "ENST00000371001" "SYCP2"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 43 of gene's SYCP2 transcript: ENST00000371001 are not equivalent in the edb dataset (v101):59864311-59864388 and the gtf file (v102):59864314-59864388... PLEASE LOOK INTO THIS"
+[1] "ENST00000412613" "SYCP2"          
+[1] "gene: SYCP2 with transcript: ENST00000412613 do not have any pfam information"
 [1] "ENST00000392927" "SYCP3"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 8 of gene's SYCP3 transcript: ENST00000392927 are not equivalent in the edb dataset (v101):101728927-101728980 and the gtf file (v102):101728930-101728980... PLEASE LOOK INTO THIS"
 [1] "ENST00000266743" "SYCP3"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 8 of gene's SYCP3 transcript: ENST00000266743 are not equivalent in the edb dataset (v101):101728927-101728980 and the gtf file (v102):101728930-101728980... PLEASE LOOK INTO THIS"
 [1] "ENST00000392924" "SYCP3"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 8 of gene's SYCP3 transcript: ENST00000392924 are not equivalent in the edb dataset (v101):101728927-101728980 and the gtf file (v102):101728930-101728980... PLEASE LOOK INTO THIS"
+[1] "ENST00000409874" "TDRD9"          
+Fetching CDS for 4 proteins ... 4 found
+Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 36 of gene's TDRD9 transcript: ENST00000409874 are not equivalent in the edb dataset (v101):104051981-104052082 and the gtf file (v102):104051981-104052079... PLEASE LOOK INTO THIS"
 [1] "ENST00000374333" "TEX11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 29 of gene's TEX11 transcript: ENST00000374333 are not equivalent in the edb dataset (v101):70529095-70529187 and the gtf file (v102):70529098-70529187... PLEASE LOOK INTO THIS"
 [1] "ENST00000395889" "TEX11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 29 of gene's TEX11 transcript: ENST00000395889 are not equivalent in the edb dataset (v101):70529095-70529187 and the gtf file (v102):70529098-70529187... PLEASE LOOK INTO THIS"
 [1] "ENST00000344304" "TEX11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 29 of gene's TEX11 transcript: ENST00000344304 are not equivalent in the edb dataset (v101):70529095-70529187 and the gtf file (v102):70529098-70529187... PLEASE LOOK INTO THIS"
 [1] "ENST00000374320" "TEX11"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 1/1 OK
+[1] "The start/stop coordinates of exon 18 of gene's TEX11 transcript: ENST00000374320 are not equivalent in the edb dataset (v101):70529095-70529187 and the gtf file (v102):70529098-70529187... PLEASE LOOK INTO THIS"
+[1] "ENST00000389934" "TEX14"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 32 of gene's TEX14 transcript: ENST00000389934 are not equivalent in the edb dataset (v101):58557011-58557047 and the gtf file (v102):58557014-58557047... PLEASE LOOK INTO THIS"
+[1] "ENST00000349033" "TEX14"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 31 of gene's TEX14 transcript: ENST00000349033 are not equivalent in the edb dataset (v101):58557011-58557047 and the gtf file (v102):58557014-58557047... PLEASE LOOK INTO THIS"
+[1] "ENST00000240361" "TEX14"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 32 of gene's TEX14 transcript: ENST00000240361 are not equivalent in the edb dataset (v101):58557011-58557047 and the gtf file (v102):58557014-58557047... PLEASE LOOK INTO THIS"
 [1] "ENST00000643185" "TEX15"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 9 of gene's TEX15 transcript: ENST00000643185 are not equivalent in the edb dataset (v101):30833286-30833323 and the gtf file (v102):30833289-30833323... PLEASE LOOK INTO THIS"
 [1] "ENST00000638951" "TEX15"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 10 of gene's TEX15 transcript: ENST00000638951 are not equivalent in the edb dataset (v101):30833286-30833323 and the gtf file (v102):30833289-30833323... PLEASE LOOK INTO THIS"
 [1] "ENST00000256246" "TEX15"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 4 of gene's TEX15 transcript: ENST00000256246 are not equivalent in the edb dataset (v101):30833286-30833323 and the gtf file (v102):30833289-30833323... PLEASE LOOK INTO THIS"
 [1] "ENST00000298171" "TSHR"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 10 of gene's TSHR transcript: ENST00000298171 are not equivalent in the edb dataset (v101):81142940-81144353 and the gtf file (v102):81142940-81144350... PLEASE LOOK INTO THIS"
 [1] "ENST00000541158" "TSHR"           
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 10 of gene's TSHR transcript: ENST00000541158 are not equivalent in the edb dataset (v101):81142940-81144353 and the gtf file (v102):81142940-81144350... PLEASE LOOK INTO THIS"
+[1] "ENST00000370832" "USP26"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 1 of gene's USP26 transcript: ENST00000370832 are not equivalent in the edb dataset (v101):133025479-133028220 and the gtf file (v102):133025482-133028220... PLEASE LOOK INTO THIS"
+[1] "ENST00000511190" "USP26"          
+Fetching CDS for 2 proteins ... 2 found
+Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 1 of gene's USP26 transcript: ENST00000511190 are not equivalent in the edb dataset (v101):133025479-133028220 and the gtf file (v102):133025482-133028220... PLEASE LOOK INTO THIS"
 [1] "ENST00000651177" "USP9Y"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 44 of gene's USP9Y transcript: ENST00000651177 are not equivalent in the edb dataset (v101):12859279-12859416 and the gtf file (v102):12859279-12859413... PLEASE LOOK INTO THIS"
 [1] "ENST00000338981" "USP9Y"          
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 44 of gene's USP9Y transcript: ENST00000338981 are not equivalent in the edb dataset (v101):12859279-12859416 and the gtf file (v102):12859279-12859413... PLEASE LOOK INTO THIS"
 [1] "ENST00000453031" "USP9Y"          
 Fetching CDS for 1 proteins ... 1 found
 Checking CDS and protein sequence lengths ... 0/1 OK
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000406876 and its transcript: ENST00000453031 at row: 1"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000406876 and its transcript: ENST00000453031 at row: 2"
-[1] "Could not find a CDS whith the expected length for protein: ENSP00000406876 and its transcript: ENST00000453031 at row: 3"
+[1] "Could not find a CDS whith the expected length for protein: ENSP00000406876 and its transcript: ENST00000453031 at row: 1... including entire cds for this transcript"
+Null data.table (0 rows and 0 cols)
+   chr    start     stop   transcript_id gene_name         gene_id
+1:   Y 12847045 12847153 ENST00000453031     USP9Y ENSG00000114374
+2:   Y 12856340 12856496 ENST00000453031     USP9Y ENSG00000114374
+3:   Y 12856633 12856845 ENST00000453031     USP9Y ENSG00000114374
+4:   Y 12857566 12857661 ENST00000453031     USP9Y ENSG00000114374
+5:   Y 12859279 12859413 ENST00000453031     USP9Y ENSG00000114374
+        protein_id transcript_biotype gtf exon_length total_exon_length
+1: ENSP00000406876     protein_coding   1         109               710
+2: ENSP00000406876     protein_coding   1         157               710
+3: ENSP00000406876     protein_coding   1         213               710
+4: ENSP00000406876     protein_coding   1          96               710
+5: ENSP00000406876     protein_coding   1         135               710
+   exon_num          CCDS status avg_GTEx_TPM appris GTEx pfam_exons pfam_id
+1:        5 not_in_appris  minor         4.99      0    1          0      NA
+2:        5 not_in_appris  minor         4.99      0    1          0      NA
+3:        5 not_in_appris  minor         4.99      0    1          0      NA
+4:        5 not_in_appris  minor         4.99      0    1          0      NA
+5:        5 not_in_appris  minor         4.99      0    1          0      NA
 [1] "ENST00000256474" "VHL"            
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 3 of gene's VHL transcript: ENST00000256474 are not equivalent in the edb dataset (v101):10149787-10149965 and the gtf file (v102):10149787-10149962... PLEASE LOOK INTO THIS"
 [1] "ENST00000345392" "VHL"            
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 2 of gene's VHL transcript: ENST00000345392 are not equivalent in the edb dataset (v101):10149787-10149965 and the gtf file (v102):10149787-10149962... PLEASE LOOK INTO THIS"
 [1] "ENST00000332351" "WT1"            
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 9 of gene's WT1 transcript: ENST00000332351 are not equivalent in the edb dataset (v101):32389058-32389179 and the gtf file (v102):32389061-32389179... PLEASE LOOK INTO THIS"
 [1] "ENST00000639563" "WT1"            
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 9 of gene's WT1 transcript: ENST00000639563 are not equivalent in the edb dataset (v101):32389058-32389179 and the gtf file (v102):32389061-32389179... PLEASE LOOK INTO THIS"
 [1] "ENST00000379079" "WT1"            
 Fetching CDS for 5 proteins ... 5 found
 Checking CDS and protein sequence lengths ... 5/5 OK
+[1] "The start/stop coordinates of exon 10 of gene's WT1 transcript: ENST00000379079 are not equivalent in the edb dataset (v101):32389058-32389179 and the gtf file (v102):32389061-32389179... PLEASE LOOK INTO THIS"
 [1] "ENST00000530998" "WT1"            
 Fetching CDS for 4 proteins ... 4 found
 Checking CDS and protein sequence lengths ... 4/4 OK
+[1] "The start/stop coordinates of exon 9 of gene's WT1 transcript: ENST00000530998 are not equivalent in the edb dataset (v101):32389058-32389179 and the gtf file (v102):32389061-32389179... PLEASE LOOK INTO THIS"
 [1] "ENST00000375128" "XPA"            
 Fetching CDS for 2 proteins ... 2 found
 Checking CDS and protein sequence lengths ... 2/2 OK
+[1] "The start/stop coordinates of exon 6 of gene's XPA transcript: ENST00000375128 are not equivalent in the edb dataset (v101):97675439-97675587 and the gtf file (v102):97675442-97675587... PLEASE LOOK INTO THIS"
 [1] "ENST00000262887" "XRCC1"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 17 of gene's XRCC1 transcript: ENST00000262887 are not equivalent in the edb dataset (v101):43543392-43543505 and the gtf file (v102):43543395-43543505... PLEASE LOOK INTO THIS"
 [1] "ENST00000543982" "XRCC1"          
 Fetching CDS for 3 proteins ... 3 found
 Checking CDS and protein sequence lengths ... 3/3 OK
+[1] "The start/stop coordinates of exon 16 of gene's XRCC1 transcript: ENST00000543982 are not equivalent in the edb dataset (v101):43543392-43543505 and the gtf file (v102):43543395-43543505... PLEASE LOOK INTO THIS"
